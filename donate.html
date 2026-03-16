@@ -4,144 +4,244 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate | Michelle's MisFits Cat Rescue</title>
-  <meta name="description" content="Support Michelle's MisFits Cat Rescue with a donation. Every dollar goes directly to helping cats in Medina County, Ohio.">
+  <meta name="description" content="Support Michelle's MisFits Cat Rescue with a donation. 100% of every dollar goes directly to helping cats in Medina County, Ohio. Powered by Zeffy's zero-fee platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- NAV -->
   <header>
-    <nav class="nav-wrapper">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Michelle's MisFits logo" onerror="this.style.display='none'">
-        <span>Michelle's MisFits</span>
-      </a>
-      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+    <nav>
+      <a href="index.html" class="nav-logo">Michelle's <span>MisFits</span> 🐾</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
         <li><a href="adopt.html">Adopt</a></li>
         <li><a href="foster.html">Foster</a></li>
         <li><a href="volunteer.html">Volunteer</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn-nav active">Donate</a></li>
+        <li><a href="donate.html" class="nav-donate">💛 Donate</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <h1>Support Our Mission</h1>
-    <p>Your generosity keeps our rescue running and our MisFits thriving.</p>
-  </section>
-
-  <!-- DONATE OPTIONS -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">Make a Donation</h2>
-      <p class="section-subtitle">Every dollar goes directly to veterinary care, food, and supplies for our rescue cats. Michelle's MisFits is a 501(c)(3) &mdash; your donation is tax-deductible.</p>
-
-      <div class="donate-options">
-        <div class="donate-card">
-          <div class="amount">$25</div>
-          <p>Covers a week of food and litter for one foster cat</p>
-        </div>
-        <div class="donate-card">
-          <div class="amount">$50</div>
-          <p>Covers vaccinations for one cat</p>
-        </div>
-        <div class="donate-card">
-          <div class="amount">$100</div>
-          <p>Covers a spay or neuter surgery</p>
-        </div>
-        <div class="donate-card">
-          <div class="amount">$250</div>
-          <p>Covers emergency veterinary care</p>
-        </div>
-      </div>
-
-      <div class="text-center">
-        <p style="color: var(--text-light); margin-bottom: 1.5rem;">To donate, please contact us directly or visit our Facebook page for the latest donation links.</p>
-        <a href="contact.html" class="btn btn-primary">Contact Us to Donate</a>
+  <!-- 1. DARK HERO -->
+  <section class="page-hero">
+    <div class="hero-inner">
+      <span class="hero-tag">💜 Support Michelle's MisFits</span>
+      <h1>Your Dollars Save<br><span class="highlight">Real Lives</span></h1>
+      <p class="hero-sub">Every single cent of your donation goes directly to the cats in our care — medical treatment, food, shelter, and the love they deserve while they wait for their forever homes.</p>
+      <div class="promise-badge">
+        <span class="green-dot"></span>
+        100% of donations go directly to animal care — powered by Zeffy's zero-fee platform
       </div>
     </div>
   </section>
 
-  <!-- OTHER WAYS -->
-  <section style="background: var(--bg-alt);">
+  <!-- 2. PURPLE MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span class="marquee-item">🐾 Zero platform fees</span>
+      <span class="marquee-item">💜 100% goes to the cats</span>
+      <span class="marquee-item">🏥 Vet care covered</span>
+      <span class="marquee-item">🍼 Kittens saved daily</span>
+      <span class="marquee-item">🏠 Forever homes found</span>
+      <span class="marquee-item">💛 Tax deductible</span>
+      <span class="marquee-item">📋 501(c)(3) nonprofit</span>
+      <span class="marquee-item">🐾 Zero platform fees</span>
+      <span class="marquee-item">💜 100% goes to the cats</span>
+      <span class="marquee-item">🏥 Vet care covered</span>
+      <span class="marquee-item">🍼 Kittens saved daily</span>
+      <span class="marquee-item">🏠 Forever homes found</span>
+      <span class="marquee-item">💛 Tax deductible</span>
+      <span class="marquee-item">📋 501(c)(3) nonprofit</span>
+    </div>
+  </div>
+
+  <!-- 3. DONATION TIERS -->
+  <section class="tiers-section">
     <div class="container">
-      <h2 class="section-title">Other Ways to Give</h2>
-      <div class="info-grid">
-        <div class="info-box">
-          <h3>Wish List Items</h3>
-          <ul>
-            <li>Wet and dry cat food</li>
-            <li>Clumping cat litter</li>
-            <li>Blankets and towels</li>
-            <li>Cat carriers</li>
-            <li>Toys and scratching posts</li>
-            <li>Cleaning supplies</li>
-          </ul>
+      <h2 class="section-title">Choose Your Impact</h2>
+      <p class="section-sub">Every gift — no matter the size — changes a cat's life forever.</p>
+      <div class="tiers-grid">
+        <div class="tier-card" onclick="selectTier(this)">
+          <div class="tier-emoji">🐟</div>
+          <div class="tier-amount">$10</div>
+          <div class="tier-name">Snack Sponsor</div>
+          <p class="tier-desc">Provides a week of nutritious meals for a rescue cat in our care.</p>
         </div>
-        <div class="info-box">
-          <h3>Fundraise for Us</h3>
-          <p>Host a fundraiser, set up a Facebook birthday fundraiser, or organize a supply drive at your workplace or school. Every effort counts!</p>
-          <p class="mt-2"><a href="contact.html">Contact us</a> for fundraising ideas and materials.</p>
+        <div class="tier-card selected" onclick="selectTier(this)">
+          <div class="tier-popular">⭐ Most Popular</div>
+          <div class="tier-emoji">💉</div>
+          <div class="tier-amount">$25</div>
+          <div class="tier-name">Health Hero</div>
+          <p class="tier-desc">Covers essential vaccinations and a wellness check for one cat.</p>
         </div>
-        <div class="info-box">
-          <h3>Sponsor a MisFit</h3>
-          <p>Some of our cats have ongoing medical needs. You can sponsor a specific cat's care with a monthly contribution.</p>
-          <p class="mt-2"><a href="contact.html">Ask about sponsorship</a></p>
+        <div class="tier-card" onclick="selectTier(this)">
+          <div class="tier-emoji">🏥</div>
+          <div class="tier-amount">$50</div>
+          <div class="tier-name">Rescue Angel</div>
+          <p class="tier-desc">Funds a spay/neuter surgery, stopping the cycle of overpopulation.</p>
+        </div>
+        <div class="tier-card" onclick="selectTier(this)">
+          <div class="tier-emoji">💜</div>
+          <div class="tier-amount">$100</div>
+          <div class="tier-name">Misfit Champion</div>
+          <p class="tier-desc">Covers emergency vet care for a cat in critical need of help.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-banner">
-    <h2>Every Bit Helps</h2>
-    <p>Whether it's $5 or $500, your support makes a real difference in the lives of our rescue cats.</p>
-    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+  <!-- 4. IMPACT SECTION -->
+  <section class="impact-section purple-bg bg">
+    <div class="container">
+      <h2 class="section-title light">Where Your Money Goes</h2>
+      <p class="section-sub light">Complete transparency — here's exactly how your donation helps.</p>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-amount">$10</div>
+          <h3>One Week of Food</h3>
+          <p>Feeds a rescue cat nutritious wet and dry food for an entire week.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-amount">$25</div>
+          <h3>Vaccinations + Checkup</h3>
+          <p>Covers core vaccines (FVRCP, rabies) and a full wellness exam.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-amount">$50</div>
+          <h3>Spay / Neuter Surgery</h3>
+          <p>Prevents future litters and gives one cat a healthier, longer life.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-amount">$100</div>
+          <h3>Emergency Vet Care</h3>
+          <p>Covers critical treatment for an injured or sick cat — surgeries, meds, and recovery.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- 5. ZEFFY EMBED -->
+  <section class="zeffy-section">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Michelle's MisFits</h4>
-          <p>A 501(c)(3) nonprofit cat rescue serving Medina County, Ohio and surrounding areas.</p>
+      <div class="zeffy-card">
+        <div class="zeffy-header">
+          <h2>💜 Make Your Donation</h2>
+          <div class="zeffy-badge">Secure &middot; Zero Fees &middot; Tax Deductible</div>
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
-            <li><a href="adopt.html">Adopt</a></li>
-            <li><a href="foster.html">Foster</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>Medina County, Ohio</p>
-          <p><a href="mailto:info@michellesmisfits.org">info@michellesmisfits.org</a></p>
-          <p><a href="contact.html">Contact Form</a></p>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <p><a href="#">Facebook</a></p>
-          <p><a href="#">Instagram</a></p>
+        <div class="zeffy-embed-wrap" style="height:450px;">
+          <iframe src="https://www.zeffy.com/embed/donation-form/support-the-misfits" width="100%" height="100%" style="border:none;" title="Donation Form" allow="payment"></iframe>
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; 2026 Michelle's MisFits Cat Rescue. All rights reserved.
+    </div>
+  </section>
+
+  <!-- 6. RECURRING SECTION -->
+  <section class="recurring-section dark-bg">
+    <div class="container text-center">
+      <h2 class="section-title light">Become a Monthly Misfit Supporter 🐾</h2>
+      <p class="section-sub light">Set it and forget it — your monthly gift provides steady, reliable support so we can plan ahead and save more lives.</p>
+      <div class="recurring-pills">
+        <button class="rec-pill" onclick="togglePill(this)">$10/mo</button>
+        <button class="rec-pill active" onclick="togglePill(this)">$25/mo</button>
+        <button class="rec-pill" onclick="togglePill(this)">$50/mo</button>
+        <button class="rec-pill" onclick="togglePill(this)">Custom</button>
       </div>
+      <a href="https://www.zeffy.com/embed/donation-form/support-the-misfits" target="_blank" class="btn btn-primary btn-lg">💜 Start Monthly Donation</a>
+    </div>
+  </section>
+
+  <!-- 7. OTHER WAYS -->
+  <section class="other-ways-section">
+    <div class="container">
+      <h2 class="section-title">Other Ways to Help</h2>
+      <p class="section-sub">Not ready to donate? You can still make a huge difference.</p>
+      <div class="ways-grid">
+        <div class="way-card">
+          <div class="way-emoji">📦</div>
+          <h3>Amazon Wishlist</h3>
+          <p>Send supplies directly to our rescue — food, litter, toys, and more from our curated Amazon list.</p>
+          <a href="#" class="btn btn-outline">View Wishlist</a>
+        </div>
+        <div class="way-card">
+          <div class="way-emoji">🐕</div>
+          <h3>Chewy Wishlist</h3>
+          <p>Order cat food and essentials from Chewy and have them shipped straight to our foster network.</p>
+          <a href="#" class="btn btn-outline">View Wishlist</a>
+        </div>
+        <div class="way-card">
+          <div class="way-emoji">📱</div>
+          <h3>Share Our Story</h3>
+          <p>Follow us on social media, share our posts, and help us reach more people who love cats.</p>
+          <a href="https://www.facebook.com/people/Michelles-MisFits/61588506330817/" target="_blank" class="btn btn-outline">Follow Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRE-FOOTER + FOOTER -->
+  <div class="pre-footer">
+    <h2>Every Dollar Saves a Life 🐾</h2>
+    <p>100% of your donation goes directly to the cats in our care — vet bills, food, supplies, and second chances. Powered by Zeffy's zero-fee platform.</p>
+    <a href="donate.html" class="btn btn-white">💜 Donate to Michelle's MisFits</a>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <span class="footer-logo-emoji">🐾</span>
+          <div class="footer-logo-text">Michelle's MisFits<span>Heart-Led Cat Rescue</span></div>
+        </div>
+        <p class="footer-tagline">"Every Misfit Deserves a Home."</p>
+        <a href="mailto:michellesmisfits@gmail.com" class="footer-email">📧 michellesmisfits@gmail.com</a>
+        <div class="social-row">
+          <a href="https://www.facebook.com/people/Michelles-MisFits/61588506330817/" target="_blank" class="social-icon" title="Facebook">📘</a>
+        </div>
+      </div>
+      <div class="footer-nav-col">
+        <div class="footer-nav-title">🗺️ Navigate</div>
+        <ul class="footer-nav-list">
+          <li><a href="index.html"><span class="nav-dot"></span>Home</a></li>
+          <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Meet the MisFits</a></li>
+          <li><a href="about.html"><span class="nav-dot"></span>About Us</a></li>
+          <li><a href="donate.html"><span class="nav-dot"></span>Donate</a></li>
+          <li><a href="contact.html"><span class="nav-dot"></span>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <div class="footer-nav-title">💜 Get Involved</div>
+        <ul class="footer-nav-list">
+          <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Adopt a Cat</a></li>
+          <li><a href="foster.html"><span class="nav-dot"></span>Become a Foster</a></li>
+          <li><a href="volunteer.html"><span class="nav-dot"></span>Volunteer</a></li>
+          <li><a href="donate.html"><span class="nav-dot"></span>Make a Donation</a></li>
+          <li><a href="contact.html"><span class="nav-dot"></span>Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="disclaimer"><strong>Michelle's MisFits</strong> is a registered <strong>501(c)(3) nonprofit organization</strong> based in Medina County, Ohio. All donations are tax deductible to the extent permitted by law. EIN available upon request.</p>
+      <p class="copyright">© 2025 Michelle's MisFits · Made with <span class="heart">💜</span> in Medina, Ohio</p>
     </div>
   </footer>
+
+  <script>
+    function selectTier(el) {
+      document.querySelectorAll('.tier-card').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function togglePill(el) {
+      document.querySelectorAll('.rec-pill').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>

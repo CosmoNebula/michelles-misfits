@@ -3,124 +3,359 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volunteer | Michelle's MisFits Cat Rescue</title>
-  <meta name="description" content="Volunteer with Michelle's MisFits Cat Rescue. Help us save cats in Medina County, Ohio.">
+  <title>Volunteer Application – Michelle's MisFits</title>
+  <meta name="description" content="Apply to volunteer with Michelle's MisFits Cat Rescue. Your time and skills can change a cat's world.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="nav-wrapper">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Michelle's MisFits logo" onerror="this.style.display='none'">
-        <span>Michelle's MisFits</span>
-      </a>
-      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
-        <li><a href="adopt.html">Adopt</a></li>
-        <li><a href="foster.html">Foster</a></li>
-        <li><a href="volunteer.html" class="active">Volunteer</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn-nav">Donate</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Michelle's <span>MisFits</span> 🐾</a>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
+    <li><a href="adopt.html">Adopt</a></li>
+    <li><a href="foster.html">Foster</a></li>
+    <li><a href="volunteer.html">Volunteer</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="nav-donate">💛 Donate</a></li>
+  </ul>
+</nav>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <h1>Volunteer With Us</h1>
-    <p>Your time and skills can change a cat's world.</p>
-  </section>
+<!-- 1. DARK HERO -->
+<section class="page-hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">🤝 Join the Team</span>
+    <h1>Volunteer with the <span class="accent">MisFits</span></h1>
+    <p class="hero-sub">Your time and skills can change a cat's world.</p>
+  </div>
+</section>
 
-  <!-- VOLUNTEER OPPORTUNITIES -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">Ways to Volunteer</h2>
-      <p class="section-subtitle">No matter your skills or availability, there's a way for you to help our MisFits.</p>
+<!-- 2. PURPLE MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-item">🤝 Make a Difference</span>
+    <span class="marquee-item">💜 No Experience Needed</span>
+    <span class="marquee-item">🚗 Transport Volunteers Needed</span>
+    <span class="marquee-item">📸 Social Media Help Welcome</span>
+    <span class="marquee-item">🐾 Socialize Shy Cats</span>
+    <span class="marquee-item">🎉 Help at Events</span>
+    <span class="marquee-item">✨ Every Hour Counts</span>
+    <span class="marquee-item">💛 Be Their Voice</span>
+    <!-- Duplicated for seamless loop -->
+    <span class="marquee-item">🤝 Make a Difference</span>
+    <span class="marquee-item">💜 No Experience Needed</span>
+    <span class="marquee-item">🚗 Transport Volunteers Needed</span>
+    <span class="marquee-item">📸 Social Media Help Welcome</span>
+    <span class="marquee-item">🐾 Socialize Shy Cats</span>
+    <span class="marquee-item">🎉 Help at Events</span>
+    <span class="marquee-item">✨ Every Hour Counts</span>
+    <span class="marquee-item">💛 Be Their Voice</span>
+  </div>
+</div>
 
-      <div class="ways-grid">
-        <div class="way-card">
-          <div class="icon">&#128247;</div>
-          <h3>Photography</h3>
-          <p>Help our cats get adopted faster with great photos. A good picture can be the difference between overlooked and adopted.</p>
-        </div>
-        <div class="way-card">
-          <div class="icon">&#128663;</div>
-          <h3>Transport</h3>
-          <p>Drive cats to vet appointments, foster homes, or adoption events. Reliable transport volunteers are always needed.</p>
-        </div>
-        <div class="way-card">
-          <div class="icon">&#127881;</div>
-          <h3>Events</h3>
-          <p>Help organize and run adoption events, fundraisers, and community outreach. Bring your energy and ideas!</p>
-        </div>
-        <div class="way-card">
-          <div class="icon">&#128187;</div>
-          <h3>Social Media</h3>
-          <p>Share our cats' stories online, manage posts, and help grow our community presence.</p>
-        </div>
-        <div class="way-card">
-          <div class="icon">&#129657;</div>
-          <h3>Supply Runs</h3>
-          <p>Help pick up donated food, litter, and supplies and distribute them to foster homes.</p>
-        </div>
-        <div class="way-card">
-          <div class="icon">&#128149;</div>
-          <h3>Cat Socialization</h3>
-          <p>Spend time with shy or under-socialized cats to help them trust people and prepare for adoption.</p>
+<!-- 3. FORM -->
+<div class="forms-page">
+  <div class="form-card">
+    <div class="form-header">
+      <span class="form-icon">🤝</span>
+      <h2 class="form-title-lg">Volunteer Application</h2>
+      <p class="form-subtitle">We're so glad you want to help the MisFits! Whether you have an hour a week or a whole afternoon, there's a place for you on our team. Fill out this application and we'll find the perfect volunteer role for you.</p>
+    </div>
+
+    <div class="notice-box">
+      Volunteers must be <strong>18 years or older</strong>. Applicants under 18 are welcome to volunteer with written parental or guardian consent.
+    </div>
+
+    <form action="https://formspree.io/f/mykdvrko" method="POST" onsubmit="handleSubmit(event)">
+
+      <!-- 👤 Personal Information -->
+      <div class="form-section">
+        <h3 class="section-label">👤 Personal Information</h3>
+        <div class="field-grid">
+          <div class="field-group">
+            <label class="field-label">First Name <span class="field-req">*</span></label>
+            <input type="text" name="first_name" required placeholder="Jane">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Last Name <span class="field-req">*</span></label>
+            <input type="text" name="last_name" required placeholder="Smith">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Email <span class="field-req">*</span></label>
+            <input type="email" name="email" required placeholder="jane@example.com">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Phone <span class="field-req">*</span></label>
+            <input type="tel" name="phone" required placeholder="(555) 123-4567">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Street Address <span class="field-req">*</span></label>
+            <input type="text" name="address" required placeholder="123 Main St">
+          </div>
+          <div class="field-group">
+            <label class="field-label">City <span class="field-req">*</span></label>
+            <input type="text" name="city" required placeholder="Medina">
+          </div>
+          <div class="field-group">
+            <label class="field-label">ZIP Code <span class="field-req">*</span></label>
+            <input type="text" name="zip" required placeholder="44256">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Date of Birth <span class="field-req">*</span></label>
+            <input type="text" name="dob" required placeholder="MM/DD/YYYY">
+          </div>
+          <div class="field-group">
+            <label class="field-label">How Did You Hear About Us?</label>
+            <select name="how_heard">
+              <option value="" disabled selected>Select one...</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Friend/Family">Friend or Family</option>
+              <option value="Google">Google Search</option>
+              <option value="Event">Event</option>
+              <option value="Petfinder">Petfinder</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="cta-banner">
-    <h2>Ready to Join the Team?</h2>
-    <p>Reach out to us and we'll find the perfect volunteer role for you.</p>
-    <a href="contact.html" class="btn btn-primary">Sign Up to Volunteer</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Michelle's MisFits</h4>
-          <p>A 501(c)(3) nonprofit cat rescue serving Medina County, Ohio and surrounding areas.</p>
+      <!-- 📅 Availability -->
+      <div class="form-section">
+        <h3 class="section-label">📅 Availability</h3>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="field-label">What Days Are You Available? (check all that apply) <span class="field-req">*</span></label>
+            <div class="checkbox-group inline">
+              <label class="checkbox-item"><input type="checkbox" name="days" value="Monday"> <label>Monday</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="days" value="Tuesday"> <label>Tuesday</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="days" value="Wednesday"> <label>Wednesday</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="days" value="Thursday"> <label>Thursday</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="days" value="Friday"> <label>Friday</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="days" value="Saturday"> <label>Saturday</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="days" value="Sunday"> <label>Sunday</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">How Many Hours Per Month Can You Commit? <span class="field-req">*</span></label>
+            <select name="hours_per_month" required>
+              <option value="" disabled selected>Select one...</option>
+              <option value="1-4 hours">1-4 hours</option>
+              <option value="5-10 hours">5-10 hours</option>
+              <option value="11-20 hours">11-20 hours</option>
+              <option value="20+ hours">20+ hours</option>
+              <option value="Flexible/as needed">Flexible / as needed</option>
+            </select>
+          </div>
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
-            <li><a href="adopt.html">Adopt</a></li>
-            <li><a href="foster.html">Foster</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
+      </div>
+
+      <!-- 💜 Areas of Interest -->
+      <div class="form-section">
+        <h3 class="section-label">💜 Areas of Interest</h3>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="field-label">What Volunteer Activities Interest You? (check all that apply) <span class="field-req">*</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Transport"> <label>Transport (vet runs, moving cats between fosters)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Cat Socialization"> <label>Cat Socialization (spending time with shy/new cats)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Events"> <label>Events (adoption events, fundraisers, community outreach)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Social Media/Photography"> <label>Social Media / Photography (content creation, photos, videos)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Fundraising/Grant Writing"> <label>Fundraising / Grant Writing</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Administrative"> <label>Administrative (data entry, emails, applications review)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Supply Runs"> <label>Supply Runs (picking up donations, shopping for supplies)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Foster Support"> <label>Foster Support (helping fosters with supplies, check-ins)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Veterinary/Medical"> <label>Veterinary / Medical (vet tech, medical background)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="interests" value="Other"> <label>Other</label></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 📝 Background & Experience -->
+      <div class="form-section">
+        <h3 class="section-label">📝 Background & Experience</h3>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="field-label">Do You Have Experience Working with Animals? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="animal_exp" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="animal_exp" value="No"> <label>No</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">If Yes, Please Describe Your Experience</label>
+            <textarea name="experience" placeholder="Tell us about any relevant experience — professional, volunteer, or personal." rows="3"></textarea>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Why Do You Want to Volunteer with Michelle's MisFits? <span class="field-req">*</span></label>
+            <textarea name="why_volunteer" required placeholder="What motivates you to give your time to cat rescue?" rows="4"></textarea>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Do You Have a Valid Driver's License? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="license" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="license" value="No"> <label>No</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Do You Have Reliable Transportation? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="transportation" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="transportation" value="No"> <label>No</label></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🆘 Emergency Contact -->
+      <div class="form-section">
+        <h3 class="section-label">🆘 Emergency Contact</h3>
+        <div class="field-grid">
+          <div class="field-group">
+            <label class="field-label">Emergency Contact Name <span class="field-req">*</span></label>
+            <input type="text" name="emergency_name" required placeholder="Full name">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Relationship <span class="field-req">*</span></label>
+            <input type="text" name="emergency_relationship" required placeholder="e.g. Spouse, Parent">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Emergency Contact Phone <span class="field-req">*</span></label>
+            <input type="tel" name="emergency_phone" required placeholder="(555) 123-4567">
+          </div>
+        </div>
+      </div>
+
+      <!-- 🌟 Reference -->
+      <div class="form-section">
+        <h3 class="section-label">🌟 Reference</h3>
+        <div class="field-grid">
+          <div class="field-group">
+            <label class="field-label">Reference Name <span class="field-req">*</span></label>
+            <input type="text" name="ref_name" required placeholder="Full name">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Relationship <span class="field-req">*</span></label>
+            <input type="text" name="ref_relationship" required placeholder="e.g. Manager, Friend">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Reference Phone or Email <span class="field-req">*</span></label>
+            <input type="text" name="ref_contact" required placeholder="Phone number or email">
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Agreement -->
+      <div class="form-section">
+        <h3 class="section-label">✅ Agreement</h3>
+        <div class="agreement-box">
+          <p>By submitting this application, I affirm that all information provided is true and accurate to the best of my knowledge. I understand that:</p>
+          <ul style="margin:12px 0 0 18px;list-style:disc;">
+            <li>Volunteering with Michelle's MisFits is unpaid and on a voluntary basis.</li>
+            <li>I will follow all guidelines and instructions provided by the rescue.</li>
+            <li>I will treat all animals with kindness, patience, and respect.</li>
+            <li>I will maintain the confidentiality of adopter, foster, and rescue information.</li>
+            <li>Michelle's MisFits reserves the right to end the volunteer relationship at any time.</li>
+            <li>I am responsible for my own safety during volunteer activities.</li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>Medina County, Ohio</p>
-          <p><a href="mailto:info@michellesmisfits.org">info@michellesmisfits.org</a></p>
-          <p><a href="contact.html">Contact Form</a></p>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <p><a href="#">Facebook</a></p>
-          <p><a href="#">Instagram</a></p>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="checkbox-item">
+              <input type="checkbox" name="agree" value="Yes" required>
+              <label>I have read and agree to the terms above. <span class="field-req">*</span></label>
+            </label>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; 2026 Michelle's MisFits Cat Rescue. All rights reserved.
+
+      <button type="submit" class="submit-btn">🤝 Submit Volunteer Application</button>
+      <p class="submit-note">We'll review your application and reach out within 48 hours. Thank you for wanting to make a difference!</p>
+    </form>
+
+    <div class="success-msg" id="vol-success">
+      <span class="s-icon">🎉</span>
+      <h3>Application Submitted!</h3>
+      <p>Thank you for applying to volunteer with Michelle's MisFits! We've received your application and will review it carefully. Expect to hear from us within 48 hours. In the meantime, feel free to <a href="mailto:michellesmisfits@gmail.com">email us</a> with any questions.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRE-FOOTER + FOOTER -->
+<div class="pre-footer">
+  <h2>Every Dollar Saves a Life 🐾</h2>
+  <p>100% of your donation goes directly to the cats in our care — vet bills, food, supplies, and second chances. Powered by Zeffy's zero-fee platform.</p>
+  <a href="donate.html" class="btn btn-white">💜 Donate to Michelle's MisFits</a>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-wrap">
+        <span class="footer-logo-emoji">🐾</span>
+        <div class="footer-logo-text">Michelle's MisFits<span>Heart-Led Cat Rescue</span></div>
+      </div>
+      <p class="footer-tagline">"Every Misfit Deserves a Home."</p>
+      <a href="mailto:michellesmisfits@gmail.com" class="footer-email">📧 michellesmisfits@gmail.com</a>
+      <div class="social-row">
+        <a href="https://www.facebook.com/people/Michelles-MisFits/61588506330817/" target="_blank" class="social-icon" title="Facebook">📘</a>
       </div>
     </div>
-  </footer>
+    <div class="footer-nav-col">
+      <div class="footer-nav-title">🗺️ Navigate</div>
+      <ul class="footer-nav-list">
+        <li><a href="index.html"><span class="nav-dot"></span>Home</a></li>
+        <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Meet the MisFits</a></li>
+        <li><a href="about.html"><span class="nav-dot"></span>About Us</a></li>
+        <li><a href="donate.html"><span class="nav-dot"></span>Donate</a></li>
+        <li><a href="contact.html"><span class="nav-dot"></span>Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav-col">
+      <div class="footer-nav-title">💜 Get Involved</div>
+      <ul class="footer-nav-list">
+        <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Adopt a Cat</a></li>
+        <li><a href="foster.html"><span class="nav-dot"></span>Become a Foster</a></li>
+        <li><a href="volunteer.html"><span class="nav-dot"></span>Volunteer</a></li>
+        <li><a href="donate.html"><span class="nav-dot"></span>Make a Donation</a></li>
+        <li><a href="contact.html"><span class="nav-dot"></span>Get in Touch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="disclaimer"><strong>Michelle's MisFits</strong> is a registered <strong>501(c)(3) nonprofit organization</strong> based in Medina County, Ohio. All donations are tax deductible to the extent permitted by law. EIN available upon request.</p>
+    <p class="copyright">© 2025 Michelle's MisFits · Made with <span class="heart">💜</span> in Medina, Ohio</p>
+  </div>
+</footer>
+
+<script>
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('vol-success').style.display = 'block';
+      } else {
+        alert('Oops! Something went wrong. Please try again or email us directly at michellesmisfits@gmail.com.');
+      }
+    } catch (err) {
+      alert('Oops! Something went wrong. Please try again or email us directly at michellesmisfits@gmail.com.');
+    }
+  }
+</script>
 
 </body>
 </html>

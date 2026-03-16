@@ -3,148 +3,472 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adopt | Michelle's MisFits Cat Rescue</title>
-  <meta name="description" content="Learn about our adoption process and how to give a MisFit cat their forever home.">
+  <title>Adoption Application – Michelle's MisFits</title>
+  <meta name="description" content="Apply to adopt a MisFit cat. Open your heart and home to a cat who's been waiting for their person.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="nav-wrapper">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Michelle's MisFits logo" onerror="this.style.display='none'">
-        <span>Michelle's MisFits</span>
-      </a>
-      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
-        <li><a href="adopt.html" class="active">Adopt</a></li>
-        <li><a href="foster.html">Foster</a></li>
-        <li><a href="volunteer.html">Volunteer</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn-nav">Donate</a></li>
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Michelle's <span>MisFits</span> 🐾</a>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
+    <li><a href="adopt.html">Adopt</a></li>
+    <li><a href="foster.html">Foster</a></li>
+    <li><a href="volunteer.html">Volunteer</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="nav-donate">💛 Donate</a></li>
+  </ul>
+</nav>
+
+<!-- 1. DARK HERO -->
+<section class="page-hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">🏠 Start Your Journey</span>
+    <h1>Adopt a <span class="accent">MisFit</span></h1>
+    <p class="hero-sub">Open your heart and home to a cat who's been waiting for their person.</p>
+  </div>
+</section>
+
+<!-- 2. PURPLE MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-item">🏠 Find Your Perfect Match</span>
+    <span class="marquee-item">💜 All Cats Spayed/Neutered</span>
+    <span class="marquee-item">💉 Fully Vaccinated</span>
+    <span class="marquee-item">📋 Microchipped & Registered</span>
+    <span class="marquee-item">🏥 Full Wellness Exam</span>
+    <span class="marquee-item">🐾 Indoor-Only Homes</span>
+    <span class="marquee-item">✨ Every MisFit Deserves a Home</span>
+    <span class="marquee-item">💛 Adoption Saves Lives</span>
+    <!-- Duplicated for seamless loop -->
+    <span class="marquee-item">🏠 Find Your Perfect Match</span>
+    <span class="marquee-item">💜 All Cats Spayed/Neutered</span>
+    <span class="marquee-item">💉 Fully Vaccinated</span>
+    <span class="marquee-item">📋 Microchipped & Registered</span>
+    <span class="marquee-item">🏥 Full Wellness Exam</span>
+    <span class="marquee-item">🐾 Indoor-Only Homes</span>
+    <span class="marquee-item">✨ Every MisFit Deserves a Home</span>
+    <span class="marquee-item">💛 Adoption Saves Lives</span>
+  </div>
+</div>
+
+<!-- 3. FORM -->
+<div class="forms-page">
+  <div class="form-card">
+    <div class="form-header">
+      <span class="form-icon">🏠</span>
+      <h2 class="form-title-lg">Adoption Application</h2>
+      <p class="form-subtitle">Thank you for considering adoption! Please fill out this application as completely as possible. We review every application carefully to ensure the best match for both you and our cats. We'll be in touch within 48 hours.</p>
+    </div>
+
+    <div class="notice-box">
+      All cats adopted from Michelle's MisFits are <strong>spayed/neutered, vaccinated, microchipped, and have received a full wellness exam</strong> before going home. 🐾
+    </div>
+
+    <form action="https://formspree.io/f/xreavzgw" method="POST" onsubmit="handleSubmit(event)">
+
+      <!-- 🐱 Cat You're Applying For -->
+      <div class="form-section">
+        <h3 class="section-label">🐱 Cat You're Applying For</h3>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="field-label">Cat's Name <span class="field-req">*</span></label>
+            <input type="text" name="cat_name" required placeholder="Name of the cat you're interested in">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Have You Met This Cat? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="met_cat" value="Met in person" required> <label>Met in person</label></label>
+              <label class="radio-item"><input type="radio" name="met_cat" value="Seen online"> <label>Seen online</label></label>
+              <label class="radio-item"><input type="radio" name="met_cat" value="Haven't met"> <label>Haven't met</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Why This Cat? <span class="field-req">*</span></label>
+            <textarea name="why_this_cat" required placeholder="What drew you to this particular cat?" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- 👤 Personal Information -->
+      <div class="form-section">
+        <h3 class="section-label">👤 Personal Information</h3>
+        <div class="field-grid">
+          <div class="field-group">
+            <label class="field-label">First Name <span class="field-req">*</span></label>
+            <input type="text" name="first_name" required placeholder="Jane">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Last Name <span class="field-req">*</span></label>
+            <input type="text" name="last_name" required placeholder="Smith">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Email <span class="field-req">*</span></label>
+            <input type="email" name="email" required placeholder="jane@example.com">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Phone <span class="field-req">*</span></label>
+            <input type="tel" name="phone" required placeholder="(555) 123-4567">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Street Address <span class="field-req">*</span></label>
+            <input type="text" name="address" required placeholder="123 Main St">
+          </div>
+          <div class="field-group">
+            <label class="field-label">City <span class="field-req">*</span></label>
+            <input type="text" name="city" required placeholder="Medina">
+          </div>
+          <div class="field-group">
+            <label class="field-label">ZIP Code <span class="field-req">*</span></label>
+            <input type="text" name="zip" required placeholder="44256">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Date of Birth <span class="field-req">*</span></label>
+            <input type="text" name="dob" required placeholder="MM/DD/YYYY">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Occupation</label>
+            <input type="text" name="occupation" placeholder="Your occupation">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">How Did You Hear About Us?</label>
+            <select name="how_heard">
+              <option value="" disabled selected>Select one...</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Friend/Family">Friend or Family</option>
+              <option value="Google">Google Search</option>
+              <option value="Event">Event</option>
+              <option value="Petfinder">Petfinder</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🏠 Your Home -->
+      <div class="form-section">
+        <h3 class="section-label">🏠 Your Home</h3>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="field-label">Type of Home <span class="field-req">*</span></label>
+            <select name="home_type" required>
+              <option value="" disabled selected>Select one...</option>
+              <option value="House">House</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Condo">Condo</option>
+              <option value="Townhouse">Townhouse</option>
+              <option value="Mobile Home">Mobile Home</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Do You Own or Rent? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="own_rent" value="Own" required> <label>Own</label></label>
+              <label class="radio-item"><input type="radio" name="own_rent" value="Rent"> <label>Rent</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">If Renting, Does Your Landlord Allow Cats? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="landlord" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="landlord" value="No"> <label>No</label></label>
+              <label class="radio-item"><input type="radio" name="landlord" value="N/A - I own"> <label>N/A — I own</label></label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Number of Adults in Home <span class="field-req">*</span></label>
+            <input type="number" name="adults" required min="1" placeholder="2">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Number of Children in Home</label>
+            <input type="number" name="children" min="0" placeholder="0">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Ages of Children (if applicable)</label>
+            <input type="text" name="children_ages" placeholder="e.g. 4, 7, 12">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Does Anyone in the Home Have Allergies to Cats? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="allergies" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="allergies" value="No"> <label>No</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Does Everyone in the Household Agree to the Adoption? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="household_agrees" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="household_agrees" value="No"> <label>No</label></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🐾 Current Pets -->
+      <div class="form-section">
+        <h3 class="section-label">🐾 Current Pets</h3>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="field-label">Do You Currently Have Any Pets? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="has_pets" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="has_pets" value="No"> <label>No</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">If Yes, Please Describe (species, breed, age, spayed/neutered)</label>
+            <textarea name="current_pets" placeholder="e.g. 1 domestic shorthair cat, 3 years old, spayed" rows="3"></textarea>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Are Your Current Pets Up to Date on Vaccinations?</label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="pet_vaccines" value="Yes"> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="pet_vaccines" value="No"> <label>No</label></label>
+              <label class="radio-item"><input type="radio" name="pet_vaccines" value="N/A"> <label>N/A</label></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🐱 Experience & Lifestyle -->
+      <div class="form-section">
+        <h3 class="section-label">🐱 Experience & Lifestyle</h3>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="field-label">Have You Owned Cats Before? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="prev_cats" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="prev_cats" value="No"> <label>No</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">If Yes, Please Tell Us About Your Previous Cats</label>
+            <textarea name="prev_cats_detail" placeholder="How many, how long did you have them, what happened to them?" rows="3"></textarea>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">How Many Hours Per Day Is Someone Home? <span class="field-req">*</span></label>
+            <select name="hours_home" required>
+              <option value="" disabled selected>Select one...</option>
+              <option value="Most of the day (8+)">Most of the day (8+ hours)</option>
+              <option value="Half the day (4-8)">Half the day (4-8 hours)</option>
+              <option value="A few hours (1-4)">A few hours (1-4 hours)</option>
+              <option value="Rarely home">Rarely home during the day</option>
+              <option value="Work from home">Work from home</option>
+            </select>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Will This Cat Be Kept Strictly Indoors? <span class="field-req">*</span></label>
+            <div class="radio-group inline">
+              <label class="radio-item"><input type="radio" name="indoor_only" value="Yes" required> <label>Yes</label></label>
+              <label class="radio-item"><input type="radio" name="indoor_only" value="No"> <label>No</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">What Traits Are You Looking For? (check all that apply)</label>
+            <div class="checkbox-group inline">
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Lap cat"> <label>Lap cat</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Playful"> <label>Playful</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Independent"> <label>Independent</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Calm"> <label>Calm</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Good with kids"> <label>Good w/ kids</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Good with dogs"> <label>Good w/ dogs</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Good with cats"> <label>Good w/ cats</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Special needs ok"> <label>Special needs ok</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="cat_traits" value="Open to anything"> <label>Open to anything</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">What Age Range Are You Open To? (check all that apply)</label>
+            <div class="checkbox-group inline">
+              <label class="checkbox-item"><input type="checkbox" name="age_range" value="Kitten"> <label>Kitten (under 1 yr)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="age_range" value="Young adult"> <label>Young adult (1-3 yrs)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="age_range" value="Adult"> <label>Adult (3-7 yrs)</label></label>
+              <label class="checkbox-item"><input type="checkbox" name="age_range" value="Senior"> <label>Senior (7+ yrs)</label></label>
+            </div>
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Why Do You Want to Adopt a Cat? <span class="field-req">*</span></label>
+            <textarea name="why_adopt" required placeholder="Tell us a little about why you'd like to bring a MisFit into your home." rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🏥 Veterinarian Information -->
+      <div class="form-section">
+        <h3 class="section-label">🏥 Veterinarian Information</h3>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="field-label">Veterinary Clinic Name</label>
+            <input type="text" name="vet_clinic" placeholder="Clinic name">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Veterinarian Name</label>
+            <input type="text" name="vet_name" placeholder="Dr. Smith">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Vet Phone Number</label>
+            <input type="tel" name="vet_phone" placeholder="(555) 123-4567">
+          </div>
+        </div>
+      </div>
+
+      <!-- 🌟 Personal Reference -->
+      <div class="form-section">
+        <h3 class="section-label">🌟 Personal Reference</h3>
+        <div class="field-grid">
+          <div class="field-group">
+            <label class="field-label">Reference Name <span class="field-req">*</span></label>
+            <input type="text" name="ref_name" required placeholder="Full name">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Relationship <span class="field-req">*</span></label>
+            <input type="text" name="ref_relationship" required placeholder="e.g. Friend, Coworker">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Reference Phone or Email <span class="field-req">*</span></label>
+            <input type="text" name="ref_contact" required placeholder="Phone number or email">
+          </div>
+        </div>
+      </div>
+
+      <!-- 🆘 Emergency Contact -->
+      <div class="form-section">
+        <h3 class="section-label">🆘 Emergency Contact</h3>
+        <div class="field-grid">
+          <div class="field-group">
+            <label class="field-label">Emergency Contact Name <span class="field-req">*</span></label>
+            <input type="text" name="emergency_name" required placeholder="Full name">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Relationship <span class="field-req">*</span></label>
+            <input type="text" name="emergency_relationship" required placeholder="e.g. Spouse, Parent">
+          </div>
+          <div class="field-group field-full">
+            <label class="field-label">Emergency Contact Phone <span class="field-req">*</span></label>
+            <input type="tel" name="emergency_phone" required placeholder="(555) 123-4567">
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Adoption Agreement -->
+      <div class="form-section">
+        <h3 class="section-label">✅ Adoption Agreement</h3>
+        <div class="agreement-box">
+          <p>By submitting this application, I affirm that all information provided is true and accurate to the best of my knowledge. I understand that:</p>
+          <ul style="margin:12px 0 0 18px;list-style:disc;">
+            <li>Michelle's MisFits reserves the right to approve or deny any adoption application.</li>
+            <li>A home visit or virtual home check may be required before final approval.</li>
+            <li>All adopted cats must be kept <strong>strictly indoors</strong>.</li>
+            <li>If I can no longer care for the cat, I agree to <strong>return the cat to Michelle's MisFits</strong> — not rehome, surrender to a shelter, or abandon.</li>
+            <li>An adoption fee applies and helps cover veterinary care, food, and rescue operations.</li>
+            <li>Michelle's MisFits may follow up after adoption to check on the cat's well-being.</li>
+          </ul>
+        </div>
+        <div class="field-grid">
+          <div class="field-group field-full">
+            <label class="checkbox-item">
+              <input type="checkbox" name="agree" value="Yes" required>
+              <label>I have read and agree to the terms above. <span class="field-req">*</span></label>
+            </label>
+          </div>
+          <div class="field-group field-full">
+            <label class="checkbox-item">
+              <input type="checkbox" name="home_check" value="Yes" required>
+              <label>I agree to a home visit or virtual home check if requested. <span class="field-req">*</span></label>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">🏠 Submit Adoption Application</button>
+      <p class="submit-note">We'll review your application and reach out within 48 hours. Thank you for choosing to adopt!</p>
+    </form>
+
+    <div class="success-msg" id="adp-success">
+      <span class="s-icon">🎉</span>
+      <h3>Application Submitted!</h3>
+      <p>Thank you for applying to adopt a MisFit! We've received your application and will review it carefully. Expect to hear from us within 48 hours. In the meantime, feel free to <a href="mailto:michellesmisfits@gmail.com">email us</a> with any questions.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRE-FOOTER + FOOTER -->
+<div class="pre-footer">
+  <h2>Every Dollar Saves a Life 🐾</h2>
+  <p>100% of your donation goes directly to the cats in our care — vet bills, food, supplies, and second chances. Powered by Zeffy's zero-fee platform.</p>
+  <a href="donate.html" class="btn btn-white">💜 Donate to Michelle's MisFits</a>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-wrap">
+        <span class="footer-logo-emoji">🐾</span>
+        <div class="footer-logo-text">Michelle's MisFits<span>Heart-Led Cat Rescue</span></div>
+      </div>
+      <p class="footer-tagline">"Every Misfit Deserves a Home."</p>
+      <a href="mailto:michellesmisfits@gmail.com" class="footer-email">📧 michellesmisfits@gmail.com</a>
+      <div class="social-row">
+        <a href="https://www.facebook.com/people/Michelles-MisFits/61588506330817/" target="_blank" class="social-icon" title="Facebook">📘</a>
+      </div>
+    </div>
+    <div class="footer-nav-col">
+      <div class="footer-nav-title">🗺️ Navigate</div>
+      <ul class="footer-nav-list">
+        <li><a href="index.html"><span class="nav-dot"></span>Home</a></li>
+        <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Meet the MisFits</a></li>
+        <li><a href="about.html"><span class="nav-dot"></span>About Us</a></li>
+        <li><a href="donate.html"><span class="nav-dot"></span>Donate</a></li>
+        <li><a href="contact.html"><span class="nav-dot"></span>Contact</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <h1>Adopt a MisFit</h1>
-    <p>Open your heart and home to a cat in need.</p>
-  </section>
-
-  <!-- ADOPTION STEPS -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">How Adoption Works</h2>
-      <p class="section-subtitle">Our process is designed to find the best match for both you and your new furry family member.</p>
-
-      <div class="steps">
-        <div class="step">
-          <h3>Browse</h3>
-          <p>Check out our <a href="meet-the-misfits.html">available cats</a> and find one (or more!) that catches your eye.</p>
-        </div>
-        <div class="step">
-          <h3>Apply</h3>
-          <p>Fill out our adoption application. We'll review it and reach out to chat about your home and lifestyle.</p>
-        </div>
-        <div class="step">
-          <h3>Meet &amp; Greet</h3>
-          <p>Spend time with your potential new companion to make sure it's a perfect fit.</p>
-        </div>
-        <div class="step">
-          <h3>Welcome Home</h3>
-          <p>Once approved, complete the adoption fee and bring your new MisFit home!</p>
-        </div>
-      </div>
     </div>
-  </section>
-
-  <!-- ADOPTION INFO -->
-  <section style="background: var(--bg-alt);">
-    <div class="container">
-      <div class="info-grid">
-        <div class="info-box">
-          <h3>What's Included</h3>
-          <ul>
-            <li>Spay or neuter surgery</li>
-            <li>Up-to-date vaccinations</li>
-            <li>Microchip and registration</li>
-            <li>FIV/FeLV testing</li>
-            <li>Deworming and flea treatment</li>
-          </ul>
-        </div>
-        <div class="info-box">
-          <h3>Adoption Fees</h3>
-          <p>Our adoption fees help cover the cost of veterinary care and rescue operations.</p>
-          <ul>
-            <li>Kittens (under 1 year): $125</li>
-            <li>Adults (1-7 years): $100</li>
-            <li>Seniors (7+ years): $75</li>
-            <li>Bonded pairs: Special pricing</li>
-          </ul>
-        </div>
-        <div class="info-box">
-          <h3>Requirements</h3>
-          <ul>
-            <li>Must be 21 years or older</li>
-            <li>Landlord approval (if renting)</li>
-            <li>All household members must agree</li>
-            <li>Commitment to indoor-only living</li>
-            <li>Vet reference preferred</li>
-          </ul>
-        </div>
-      </div>
+    <div class="footer-nav-col">
+      <div class="footer-nav-title">💜 Get Involved</div>
+      <ul class="footer-nav-list">
+        <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Adopt a Cat</a></li>
+        <li><a href="foster.html"><span class="nav-dot"></span>Become a Foster</a></li>
+        <li><a href="volunteer.html"><span class="nav-dot"></span>Volunteer</a></li>
+        <li><a href="donate.html"><span class="nav-dot"></span>Make a Donation</a></li>
+        <li><a href="contact.html"><span class="nav-dot"></span>Get in Touch</a></li>
+      </ul>
     </div>
-  </section>
+  </div>
+  <div class="footer-bottom">
+    <p class="disclaimer"><strong>Michelle's MisFits</strong> is a registered <strong>501(c)(3) nonprofit organization</strong> based in Medina County, Ohio. All donations are tax deductible to the extent permitted by law. EIN available upon request.</p>
+    <p class="copyright">© 2025 Michelle's MisFits · Made with <span class="heart">💜</span> in Medina, Ohio</p>
+  </div>
+</footer>
 
-  <!-- CTA -->
-  <section class="cta-banner">
-    <h2>Ready to Adopt?</h2>
-    <p>Contact us to start the application process or ask any questions about adoption.</p>
-    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Michelle's MisFits</h4>
-          <p>A 501(c)(3) nonprofit cat rescue serving Medina County, Ohio and surrounding areas.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
-            <li><a href="adopt.html">Adopt</a></li>
-            <li><a href="foster.html">Foster</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>Medina County, Ohio</p>
-          <p><a href="mailto:info@michellesmisfits.org">info@michellesmisfits.org</a></p>
-          <p><a href="contact.html">Contact Form</a></p>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <p><a href="#">Facebook</a></p>
-          <p><a href="#">Instagram</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; 2026 Michelle's MisFits Cat Rescue. All rights reserved.
-      </div>
-    </div>
-  </footer>
+<script>
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('adp-success').style.display = 'block';
+      } else {
+        alert('Oops! Something went wrong. Please try again or email us directly at michellesmisfits@gmail.com.');
+      }
+    } catch (err) {
+      alert('Oops! Something went wrong. Please try again or email us directly at michellesmisfits@gmail.com.');
+    }
+  }
+</script>
 
 </body>
 </html>

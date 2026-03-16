@@ -4,151 +4,252 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meet the MisFits | Michelle's MisFits Cat Rescue</title>
-  <meta name="description" content="Browse our adoptable cats and kittens. Each MisFit is looking for their forever home in Medina County, Ohio.">
+  <meta name="description" content="Meet our adorable, adoptable cats! Each MisFit has a unique personality and is looking for their forever home. View available cats from Michelle's MisFits rescue in Medina County, Ohio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="nav-wrapper">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Michelle's MisFits logo" onerror="this.style.display='none'">
-        <span>Michelle's MisFits</span>
-      </a>
-      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="meet-the-misfits.html" class="active">Meet the MisFits</a></li>
-        <li><a href="adopt.html">Adopt</a></li>
-        <li><a href="foster.html">Foster</a></li>
-        <li><a href="volunteer.html">Volunteer</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn-nav">Donate</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html" class="nav-logo">Michelle's <span>MisFits</span> 🐾</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
+      <li><a href="adopt.html">Adopt</a></li>
+      <li><a href="foster.html">Foster</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="nav-donate">💛 Donate</a></li>
+    </ul>
+  </nav>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <h1>Meet the MisFits</h1>
-    <p>Each of these special cats is looking for their forever home.</p>
-  </section>
-
-  <!-- CAT GALLERY -->
-  <section>
-    <div class="container">
-      <p class="section-subtitle">Our available cats change frequently as new rescues come in and happy adoptions go out. Check back often or <a href="contact.html">contact us</a> to ask about a specific cat!</p>
-
-      <div class="cat-grid">
-
-        <div class="cat-card">
-          <img src="images/cat-placeholder.jpg" alt="Whiskers" onerror="this.style.background='#e8e0f0';this.style.height='260px'">
-          <div class="cat-card-body">
-            <h3>Whiskers</h3>
-            <p class="cat-meta">Male &bull; 3 years &bull; Tabby</p>
-            <p>A gentle giant who loves lap time and chin scratches. Great with other cats.</p>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <img src="images/cat-placeholder.jpg" alt="Luna" onerror="this.style.background='#e8e0f0';this.style.height='260px'">
-          <div class="cat-card-body">
-            <h3>Luna</h3>
-            <p class="cat-meta">Female &bull; 1 year &bull; Black</p>
-            <p>Playful and curious, Luna is always up for an adventure. She'd love a home with a window perch.</p>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <img src="images/cat-placeholder.jpg" alt="Mango" onerror="this.style.background='#e8e0f0';this.style.height='260px'">
-          <div class="cat-card-body">
-            <h3>Mango</h3>
-            <p class="cat-meta">Male &bull; 5 years &bull; Orange Tabby</p>
-            <p>This sweet boy is as warm as his name. Mango is calm, affectionate, and loves a good nap.</p>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <img src="images/cat-placeholder.jpg" alt="Mittens" onerror="this.style.background='#e8e0f0';this.style.height='260px'">
-          <div class="cat-card-body">
-            <h3>Mittens</h3>
-            <p class="cat-meta">Female &bull; 2 years &bull; Calico</p>
-            <p>Mittens is sassy and independent but melts when you find her favorite scratch spot.</p>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <img src="images/cat-placeholder.jpg" alt="Shadow" onerror="this.style.background='#e8e0f0';this.style.height='260px'">
-          <div class="cat-card-body">
-            <h3>Shadow</h3>
-            <p class="cat-meta">Male &bull; 7 years &bull; Gray</p>
-            <p>A senior sweetheart who just wants a quiet home and a warm lap to curl up on.</p>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <img src="images/cat-placeholder.jpg" alt="Biscuit" onerror="this.style.background='#e8e0f0';this.style.height='260px'">
-          <div class="cat-card-body">
-            <h3>Biscuit</h3>
-            <p class="cat-meta">Female &bull; 4 months &bull; Tuxedo</p>
-            <p>This tiny tuxedo kitten is full of energy and loves to make biscuits on blankets!</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="text-center mt-3">
-        <a href="adopt.html" class="btn btn-primary">Start the Adoption Process</a>
-      </div>
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="hero-content">
+      <p class="eyebrow">🐾 Available Now</p>
+      <h1>Meet the <span class="accent">MisFits</span></h1>
+      <p class="subtitle">These lovable weirdos are ready to steal your couch, your heart, and your pillow. Could one of them be yours?</p>
+    </div>
+    <div class="floating-cats">
+      <span class="float-cat float-cat-1">🐱</span>
+      <span class="float-cat float-cat-2">🐈</span>
+      <span class="float-cat float-cat-3">😸</span>
+      <span class="float-cat float-cat-4">🐾</span>
+      <span class="float-cat float-cat-5">🐈‍⬛</span>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-banner">
-    <h2>Don't See Your Perfect Match?</h2>
-    <p>New MisFits arrive regularly. Reach out and we'll help you find the right cat for your family.</p>
-    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>🐾 Every Misfit Deserves A Home</span>
+      <span>💜 Heart-Led Rescue</span>
+      <span>🍼 Bottle Baby Specialists</span>
+      <span>🏠 Foster Based</span>
+      <span>📋 501(c)(3) Nonprofit</span>
+      <span>💛 Medina County Ohio</span>
+      <span>🐾 Every Misfit Deserves A Home</span>
+      <span>💜 Heart-Led Rescue</span>
+      <span>🍼 Bottle Baby Specialists</span>
+      <span>🏠 Foster Based</span>
+      <span>📋 501(c)(3) Nonprofit</span>
+      <span>💛 Medina County Ohio</span>
+    </div>
+  </div>
+
+  <!-- Cat Gallery -->
+  <section class="adopt-section">
+    <div class="animals-grid">
+
+      <!-- Butterscotch -->
+      <div class="animal-card reveal">
+        <div class="animal-photo" style="background-color: #f4a843;">
+          <span class="animal-emoji">🐈</span>
+          <span class="status-badge status-available">Available</span>
+        </div>
+        <div class="animal-info">
+          <h3>Butterscotch</h3>
+          <p class="animal-meta">3 yrs · Female · Spayed</p>
+          <p class="animal-bio">This ginger queen thinks she owns the place — and honestly? She does. Loves chin scratches, hates mondays, and will judge your life choices.</p>
+          <div class="animal-tags">
+            <span class="tag">Good w/ Kids</span>
+            <span class="tag">Indoor Only</span>
+            <span class="tag">Lap Cat</span>
+          </div>
+          <a href="adopt.html" class="btn btn-primary">💛 Meet Butterscotch</a>
+        </div>
+      </div>
+
+      <!-- Professor Paws -->
+      <div class="animal-card reveal">
+        <div class="animal-photo" style="background-color: #9e9e9e;">
+          <span class="animal-emoji">🐱</span>
+          <span class="status-badge status-foster">In Foster</span>
+        </div>
+        <div class="animal-info">
+          <h3>Professor Paws</h3>
+          <p class="animal-meta">5 yrs · Male · Neutered</p>
+          <p class="animal-bio">A distinguished gentleman with a PhD in napping. Highly intelligent, mildly chaotic, and absolutely convinced he could run a small country.</p>
+          <div class="animal-tags">
+            <span class="tag">Quiet Home</span>
+            <span class="tag">Cat Friendly</span>
+            <span class="tag">Snuggler</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Midnight -->
+      <div class="animal-card reveal">
+        <div class="animal-photo" style="background-color: #2c2c2c;">
+          <span class="animal-emoji">🐈‍⬛</span>
+          <span class="status-badge status-available">Available</span>
+        </div>
+        <div class="animal-info">
+          <h3>Midnight</h3>
+          <p class="animal-meta">2 yrs · Female · Spayed</p>
+          <p class="animal-bio">Don't let the spooky vibes fool you — Midnight is the biggest softie in the shelter. Pure chaos at 3am, pure love every other hour.</p>
+          <div class="animal-tags">
+            <span class="tag">Playful</span>
+            <span class="tag">Dog Friendly</span>
+            <span class="tag">Zoomies</span>
+          </div>
+          <a href="adopt.html" class="btn btn-primary">💛 Meet Midnight</a>
+        </div>
+      </div>
+
+      <!-- Waffles -->
+      <div class="animal-card reveal">
+        <div class="animal-photo" style="background-color: #a58260;">
+          <span class="animal-emoji">😸</span>
+          <span class="status-badge status-pending">Pending</span>
+        </div>
+        <div class="animal-info">
+          <h3>Waffles</h3>
+          <p class="animal-meta">1 yr · Male · Neutered</p>
+          <p class="animal-bio">Waffles came in as a kitten with nothing but attitude and ambition. Now he's got both plus a pending adoption application. King behavior.</p>
+          <div class="animal-tags">
+            <span class="tag">Kitten Energy</span>
+            <span class="tag">Bonded Pair OK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sir Reginald -->
+      <div class="animal-card reveal">
+        <div class="animal-photo" style="background-color: #1a1a2e;">
+          <span class="animal-emoji">🐾</span>
+          <span class="status-badge status-available">Available</span>
+        </div>
+        <div class="animal-info">
+          <h3>Sir Reginald</h3>
+          <p class="animal-meta">6 yrs · Male · Neutered</p>
+          <p class="animal-bio">Sir Reginald is a tuxedo cat who clearly believes he is of noble birth. Sophisticated taste in nap spots, absolutely feral about tuna.</p>
+          <div class="animal-tags">
+            <span class="tag">Senior Friendly</span>
+            <span class="tag">Only Pet</span>
+            <span class="tag">Couch Potato</span>
+          </div>
+          <a href="adopt.html" class="btn btn-primary">💛 Meet Sir Reginald</a>
+        </div>
+      </div>
+
+      <!-- Biscuit -->
+      <div class="animal-card reveal">
+        <div class="animal-photo" style="background-color: #c97b3d;">
+          <span class="animal-emoji">😺</span>
+          <span class="status-badge status-available">Available</span>
+        </div>
+        <div class="animal-info">
+          <h3>Biscuit</h3>
+          <p class="animal-meta">4 yrs · Female · Spayed</p>
+          <p class="animal-bio">Biscuit makes biscuits (the bread kind, with her paws) on absolutely everything. Soft, warm, and perfectly golden.</p>
+          <div class="animal-tags">
+            <span class="tag">Good w/ Kids</span>
+            <span class="tag">Lap Cat</span>
+            <span class="tag">Chatty</span>
+          </div>
+          <a href="adopt.html" class="btn btn-primary">💛 Meet Biscuit</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center" style="margin-top: 2rem;">
+      <a href="adopt.html" class="btn btn-outline">View All MisFits →</a>
+    </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Michelle's MisFits</h4>
-          <p>A 501(c)(3) nonprofit cat rescue serving Medina County, Ohio and surrounding areas.</p>
+  <!-- CTA Section -->
+  <section class="cta-section" style="background: #f4a843;">
+    <div class="cta-content reveal">
+      <h2>Don't See Your Perfect Match?</h2>
+      <p>New MisFits arrive regularly. Reach out and we'll help you find the right cat for your family.</p>
+      <a href="contact.html" class="btn btn-white">📬 Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Pre-footer + Footer -->
+  <div class="pre-footer">
+    <h2>Every Dollar Saves a Life 🐾</h2>
+    <p>100% of your donation goes directly to the cats in our care — vet bills, food, supplies, and second chances. Powered by Zeffy's zero-fee platform.</p>
+    <a href="donate.html" class="btn btn-white">💜 Donate to Michelle's MisFits</a>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <span class="footer-logo-emoji">🐾</span>
+          <div class="footer-logo-text">Michelle's MisFits<span>Heart-Led Cat Rescue</span></div>
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
-            <li><a href="adopt.html">Adopt</a></li>
-            <li><a href="foster.html">Foster</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>Medina County, Ohio</p>
-          <p><a href="mailto:info@michellesmisfits.org">info@michellesmisfits.org</a></p>
-          <p><a href="contact.html">Contact Form</a></p>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <p><a href="#">Facebook</a></p>
-          <p><a href="#">Instagram</a></p>
+        <p class="footer-tagline">"Every Misfit Deserves a Home."</p>
+        <a href="mailto:michellesmisfits@gmail.com" class="footer-email">📧 michellesmisfits@gmail.com</a>
+        <div class="social-row">
+          <a href="https://www.facebook.com/people/Michelles-MisFits/61588506330817/" target="_blank" class="social-icon" title="Facebook">📘</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; 2026 Michelle's MisFits Cat Rescue. All rights reserved.
+      <div class="footer-nav-col">
+        <div class="footer-nav-title">🗺️ Navigate</div>
+        <ul class="footer-nav-list">
+          <li><a href="index.html"><span class="nav-dot"></span>Home</a></li>
+          <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Meet the MisFits</a></li>
+          <li><a href="about.html"><span class="nav-dot"></span>About Us</a></li>
+          <li><a href="donate.html"><span class="nav-dot"></span>Donate</a></li>
+          <li><a href="contact.html"><span class="nav-dot"></span>Contact</a></li>
+        </ul>
       </div>
+      <div class="footer-nav-col">
+        <div class="footer-nav-title">💜 Get Involved</div>
+        <ul class="footer-nav-list">
+          <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Adopt a Cat</a></li>
+          <li><a href="foster.html"><span class="nav-dot"></span>Become a Foster</a></li>
+          <li><a href="volunteer.html"><span class="nav-dot"></span>Volunteer</a></li>
+          <li><a href="donate.html"><span class="nav-dot"></span>Make a Donation</a></li>
+          <li><a href="contact.html"><span class="nav-dot"></span>Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="disclaimer"><strong>Michelle's MisFits</strong> is a registered <strong>501(c)(3) nonprofit organization</strong> based in Medina County, Ohio. All donations are tax deductible to the extent permitted by law. EIN available upon request.</p>
+      <p class="copyright">© 2025 Michelle's MisFits · Made with <span class="heart">💜</span> in Medina, Ohio</p>
     </div>
   </footer>
+
+  <!-- Scroll Reveal -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

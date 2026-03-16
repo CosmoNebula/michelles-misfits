@@ -4,138 +4,313 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Michelle's MisFits Cat Rescue</title>
-  <meta name="description" content="Get in touch with Michelle's MisFits Cat Rescue in Medina County, Ohio. Questions about adoption, fostering, or volunteering? We'd love to hear from you.">
+  <meta name="description" content="Get in touch with Michelle's MisFits Cat Rescue in Medina County, Ohio. Questions about adoption, fostering, volunteering, or surrenders? We'd love to hear from you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- NAV -->
   <header>
-    <nav class="nav-wrapper">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Michelle's MisFits logo" onerror="this.style.display='none'">
-        <span>Michelle's MisFits</span>
-      </a>
-      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+    <nav>
+      <a href="index.html" class="nav-logo">Michelle's <span>MisFits</span> 🐾</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
         <li><a href="adopt.html">Adopt</a></li>
         <li><a href="foster.html">Foster</a></li>
         <li><a href="volunteer.html">Volunteer</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="donate.html" class="btn-nav">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="nav-donate">💛 Donate</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <h1>Contact Us</h1>
-    <p>We'd love to hear from you! Reach out with any questions.</p>
+  <!-- 1. DARK HERO -->
+  <section class="page-hero contact-hero">
+    <div class="decorative-paws">
+      <span class="paw-float paw-1">🐾</span>
+      <span class="paw-float paw-2">🐾</span>
+      <span class="paw-float paw-3">🐾</span>
+    </div>
+    <div class="hero-inner">
+      <span class="hero-eyebrow">💜 We'd Love to Hear From You</span>
+      <h1>Get in Touch<br>with the <span class="paw">Misfits</span></h1>
+      <p class="hero-sub">Whether you want to adopt, foster, volunteer, or just say hi — we're here for you and the cats who need us most.</p>
+      <div class="floating-cats">
+        <span class="float-cat cat-1">🐱</span>
+        <span class="float-cat cat-2">😺</span>
+        <span class="float-cat cat-3">🐈</span>
+      </div>
+    </div>
   </section>
 
-  <!-- CONTACT CONTENT -->
-  <section>
+  <!-- 2. QUICK CONTACT CARDS -->
+  <section class="quick-contact-section">
     <div class="container">
-      <div class="about-content">
-        <div class="form-section">
-          <h2 style="color: var(--primary-dark); margin-bottom: 1.5rem;">Send Us a Message</h2>
-          <form action="#" method="POST">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" required placeholder="Jane Smith">
+      <div class="quick-cards">
+        <div class="quick-card">
+          <div class="quick-icon">📧</div>
+          <h3>Email Us</h3>
+          <a href="mailto:michellesmisfits@gmail.com">michellesmisfits@gmail.com</a>
+          <p>We typically respond within 24-48 hours.</p>
+        </div>
+        <div class="quick-card">
+          <div class="quick-icon">📘</div>
+          <h3>Facebook</h3>
+          <a href="https://www.facebook.com/people/Michelles-MisFits/61588506330817/" target="_blank">Visit Our Facebook Page</a>
+          <p>Follow us for updates, adoptable cats, and events.</p>
+        </div>
+        <div class="quick-card">
+          <div class="quick-icon">📍</div>
+          <h3>Location</h3>
+          <p class="location-text">Medina County, OH</p>
+          <p>Foster-based rescue serving Northeast Ohio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CONTACT FORM + REASON SELECTOR -->
+  <section class="contact-body">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Reason Buttons -->
+        <div class="reason-panel">
+          <h2>What Can We Help With?</h2>
+          <p>Select a topic and we'll make sure your message gets to the right person.</p>
+          <div class="reason-buttons">
+            <button class="reason-btn active" onclick="selectReason(this, 'General Question')">
+              <span class="reason-emoji">💬</span> General Question
+            </button>
+            <button class="reason-btn" onclick="selectReason(this, 'Adoption Inquiry')">
+              <span class="reason-emoji">🏠</span> Adoption Inquiry
+            </button>
+            <button class="reason-btn" onclick="selectReason(this, 'Surrender Request')">
+              <span class="reason-emoji">🆘</span> Surrender Request
+            </button>
+            <button class="reason-btn" onclick="selectReason(this, 'Found a Stray Cat')">
+              <span class="reason-emoji">🐾</span> Found a Stray Cat
+            </button>
+            <button class="reason-btn" onclick="selectReason(this, 'Donation/Partnership')">
+              <span class="reason-emoji">💛</span> Donation/Partnership
+            </button>
+            <button class="reason-btn" onclick="selectReason(this, 'Media/Press')">
+              <span class="reason-emoji">📰</span> Media/Press
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Form Panel -->
+        <div class="form-panel">
+          <h2>Send Us a Message</h2>
+          <form action="https://formspree.io/f/xwvnzgrk" method="POST" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required placeholder="Jane">
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required placeholder="Smith">
+              </div>
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
               <input type="email" id="email" name="email" required placeholder="jane@example.com">
             </div>
             <div class="form-group">
-              <label for="subject">Subject</label>
-              <select id="subject" name="subject">
-                <option value="">Select a topic...</option>
-                <option value="adoption">Adoption Inquiry</option>
-                <option value="foster">Foster Application</option>
-                <option value="volunteer">Volunteering</option>
-                <option value="donate">Donations</option>
-                <option value="surrender">Cat Surrender</option>
-                <option value="other">Other</option>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+            <div class="form-group">
+              <label for="reason">Reason for Contact</label>
+              <select id="reason" name="reason">
+                <option value="General Question">General Question</option>
+                <option value="Adoption Inquiry">Adoption Inquiry</option>
+                <option value="Surrender Request">Surrender Request</option>
+                <option value="Found a Stray Cat">Found a Stray Cat</option>
+                <option value="Donation/Partnership">Donation/Partnership</option>
+                <option value="Media/Press">Media/Press</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required placeholder="Tell us how we can help..." rows="5"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-block">💜 Send Message</button>
           </form>
-        </div>
-        <div>
-          <div class="info-box" style="margin-bottom: 2rem;">
-            <h3>Get in Touch</h3>
-            <ul>
-              <li>Medina County, Ohio</li>
-              <li><a href="mailto:info@michellesmisfits.org">info@michellesmisfits.org</a></li>
-            </ul>
-          </div>
-          <div class="info-box" style="margin-bottom: 2rem;">
-            <h3>Follow Us</h3>
-            <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-            </ul>
-          </div>
-          <div class="info-box">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="adopt.html">Adoption Info</a></li>
-              <li><a href="foster.html">Foster Info</a></li>
-              <li><a href="volunteer.html">Volunteer Info</a></li>
-              <li><a href="donate.html">Donate</a></li>
-            </ul>
+          <div class="success-message" id="successMessage" style="display:none;">
+            <div class="success-icon">✅</div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out! We'll get back to you within 24-48 hours.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Michelle's MisFits</h4>
-          <p>A 501(c)(3) nonprofit cat rescue serving Medina County, Ohio and surrounding areas.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
-            <li><a href="adopt.html">Adopt</a></li>
-            <li><a href="foster.html">Foster</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>Medina County, Ohio</p>
-          <p><a href="mailto:info@michellesmisfits.org">info@michellesmisfits.org</a></p>
-          <p><a href="contact.html">Contact Form</a></p>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <p><a href="#">Facebook</a></p>
-          <p><a href="#">Instagram</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; 2026 Michelle's MisFits Cat Rescue. All rights reserved.
+  <!-- 4. SOCIAL STRIP -->
+  <section class="social-strip purple-bg">
+    <div class="container text-center">
+      <h2 class="section-title light">Stay Connected</h2>
+      <p class="section-sub light">Follow us on social media for the latest rescue updates, adorable cat photos, and adoption announcements.</p>
+      <div class="social-buttons">
+        <a href="https://www.facebook.com/people/Michelles-MisFits/61588506330817/" target="_blank" class="social-btn">📘 Follow Us on Facebook</a>
       </div>
     </div>
+  </section>
+
+  <!-- 5. FAQ SECTION -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Quick answers to common questions about our rescue.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How long does the adoption process take?</span>
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Our adoption process typically takes 3-7 days. It includes an application review, a brief phone or video interview, and a home environment check. We want to make sure every cat finds the perfect match, so we take the time to do it right.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What's included when I adopt?</span>
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Every adopted cat comes spayed/neutered, fully vaccinated (FVRCP + rabies), microchipped, FIV/FeLV tested, and dewormed. You'll also receive a starter kit with food, a toy, and veterinary records.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you accept owner surrenders?</span>
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we do our best to help cats whose owners can no longer care for them. Due to limited foster space, we ask that you reach out to us first so we can assess availability. Please use the contact form above and select "Surrender Request" as your reason.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>I found a stray cat — what should I do?</span>
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Contact us right away! If the cat is safe where it is, leave food and water nearby. If the cat appears injured or in danger, please take it to the nearest emergency vet. We can coordinate intake once we've assessed our foster capacity.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I foster if I already have other pets?</span>
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! Many of our fosters have resident pets. We'll work with you to find a foster cat that matches your household. Some cats do great with other animals, while others may need a separate space. We'll help you find the right fit.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Is my donation tax deductible?</span>
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Michelle's MisFits is a registered 501(c)(3) nonprofit organization. All donations are tax deductible to the full extent permitted by law. We process donations through Zeffy's zero-fee platform, so 100% of your gift goes directly to the cats. EIN available upon request.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRE-FOOTER + FOOTER -->
+  <div class="pre-footer">
+    <h2>Every Dollar Saves a Life 🐾</h2>
+    <p>100% of your donation goes directly to the cats in our care — vet bills, food, supplies, and second chances. Powered by Zeffy's zero-fee platform.</p>
+    <a href="donate.html" class="btn btn-white">💜 Donate to Michelle's MisFits</a>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <span class="footer-logo-emoji">🐾</span>
+          <div class="footer-logo-text">Michelle's MisFits<span>Heart-Led Cat Rescue</span></div>
+        </div>
+        <p class="footer-tagline">"Every Misfit Deserves a Home."</p>
+        <a href="mailto:michellesmisfits@gmail.com" class="footer-email">📧 michellesmisfits@gmail.com</a>
+        <div class="social-row">
+          <a href="https://www.facebook.com/people/Michelles-MisFits/61588506330817/" target="_blank" class="social-icon" title="Facebook">📘</a>
+        </div>
+      </div>
+      <div class="footer-nav-col">
+        <div class="footer-nav-title">🗺️ Navigate</div>
+        <ul class="footer-nav-list">
+          <li><a href="index.html"><span class="nav-dot"></span>Home</a></li>
+          <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Meet the MisFits</a></li>
+          <li><a href="about.html"><span class="nav-dot"></span>About Us</a></li>
+          <li><a href="donate.html"><span class="nav-dot"></span>Donate</a></li>
+          <li><a href="contact.html"><span class="nav-dot"></span>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <div class="footer-nav-title">💜 Get Involved</div>
+        <ul class="footer-nav-list">
+          <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Adopt a Cat</a></li>
+          <li><a href="foster.html"><span class="nav-dot"></span>Become a Foster</a></li>
+          <li><a href="volunteer.html"><span class="nav-dot"></span>Volunteer</a></li>
+          <li><a href="donate.html"><span class="nav-dot"></span>Make a Donation</a></li>
+          <li><a href="contact.html"><span class="nav-dot"></span>Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="disclaimer"><strong>Michelle's MisFits</strong> is a registered <strong>501(c)(3) nonprofit organization</strong> based in Medina County, Ohio. All donations are tax deductible to the extent permitted by law. EIN available upon request.</p>
+      <p class="copyright">© 2025 Michelle's MisFits · Made with <span class="heart">💜</span> in Medina, Ohio</p>
+    </div>
   </footer>
+
+  <script>
+    function selectReason(btn, reason) {
+      document.querySelectorAll('.reason-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('reason').value = reason;
+    }
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('successMessage').style.display = 'block';
+        } else {
+          alert('Oops! Something went wrong. Please try again or email us directly.');
+        }
+      } catch (err) {
+        alert('Oops! Something went wrong. Please try again or email us directly.');
+      }
+    }
+
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    }
+  </script>
 
 </body>
 </html>
