@@ -256,436 +256,113 @@ nav {
 .section-subtitle.light { color: rgba(255,255,255,0.65); }
 
 /* =========================================================================
-   HOMEPAGE (index.html)
+   HOMEPAGE (index.html) — Simplified
    ========================================================================= */
 
-/* --- Hero --- */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 120px 64px 80px;
+/* --- Home Hero: full-viewport bg image with marquee pinned to bottom --- */
+.home-hero {
   position: relative;
+  min-height: 92vh;
+  background: linear-gradient(135deg, #8B6F5E 0%, #4A3F3A 100%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
   overflow: hidden;
 }
 
-.hero-content {
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+.home-hero-marquee {
   position: relative;
   z-index: 2;
+  width: 100%;
+  background: var(--purple);
+  padding: 14px 0;
+  overflow: hidden;
+}
+
+.home-hero-marquee .marquee-track {
+  display: flex;
+  gap: 48px;
+  animation: marquee 22s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.home-hero-marquee .marquee-item {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 0.04em;
   display: flex;
   align-items: center;
-  gap: 48px;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  animation: fadeUp 0.8s ease both;
+  gap: 10px;
 }
 
-.hero-text {
-  flex: 1;
+/* --- Three Cards Section --- */
+.three-cards-section {
+  padding: 80px 0;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
-.hero-badge {
-  display: inline-block;
-  background: var(--blush);
-  color: var(--brown);
-  font-weight: 800;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 6px 16px;
-  border-radius: 50px;
-  margin-bottom: 20px;
-  animation: fadeUp 0.8s 0.1s ease both;
+.three-cards-section .section-title {
+  margin-bottom: 48px;
 }
 
-.hero h1 {
-  font-family: 'Fredoka One', cursive;
-  font-size: clamp(3.5rem, 7vw, 5.5rem);
-  line-height: 1.05;
-  color: var(--dark);
-  margin-bottom: 24px;
-  animation: fadeUp 0.8s 0.2s ease both;
-}
-.hero h1 .accent { color: var(--orange); }
-.hero h1 .underline { position: relative; display: inline-block; }
-.hero h1 .underline::after {
-  content: '';
-  position: absolute;
-  bottom: -4px; left: 0; right: 0;
-  height: 6px;
-  background: var(--pink);
-  border-radius: 3px;
-}
-
-.hero p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: var(--charcoal);
-  margin-bottom: 36px;
-  max-width: 480px;
-  animation: fadeUp 0.8s 0.3s ease both;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  animation: fadeUp 0.8s 0.4s ease both;
-}
-
-/* Hero visual (right side floating cats circle) */
-.hero-visual {
-  flex-shrink: 0;
-  width: 420px;
-  height: 420px;
-  position: relative;
-  animation: fadeUp 0.8s 0.3s ease both;
-}
-
-.floating-cats-circle {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: var(--blush);
-  border-radius: 50%;
-}
-.floating-cats-circle .float-cat {
-  position: absolute;
-  font-size: 3rem;
-  animation: float 3s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 0.35s);
-  top: calc(50% + 150px * sin(var(--i) * 45deg) - 24px);
-  left: calc(50% + 150px * cos(var(--i) * 45deg) - 24px);
-}
-
-/* --- Stats --- */
-.stats-section {
-  padding: 80px 64px;
-  background: var(--blush);
-  position: relative;
-}
-
-.stats-grid {
+.three-cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.stat-card {
-  padding: 32px 24px;
-  background: white;
-  border-radius: 24px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  transition: transform 0.3s;
-  text-align: center;
-}
-.stat-card:hover { transform: translateY(-6px); }
-
-.stat-number {
-  font-family: 'Fredoka One', cursive;
-  font-size: 3rem;
-  color: var(--orange);
-  display: inline;
-}
-.stat-suffix {
-  font-family: 'Fredoka One', cursive;
-  font-size: 2rem;
-  color: var(--orange);
-  display: inline;
-}
-.stat-label {
-  font-weight: 700;
-  color: var(--charcoal);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 4px;
-}
-.stat-icon { font-size: 2rem; margin-bottom: 8px; display: block; }
-
-/* --- Adoptable Section (homepage) --- */
-.adoptable-section { padding: 80px 0; }
-
-.cat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-bottom: 2rem;
 }
-.cat-card {
+
+.home-card {
   background: white;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 6px 28px rgba(0,0,0,0.07);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.cat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+.home-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+}
 
-.cat-card-img {
-  height: 200px;
+.home-card-img {
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--purple-bg), #D4C8E8);
-  position: relative;
 }
-.cat-emoji-placeholder { font-size: 5rem; }
-.cat-status-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 5px 14px;
-  border-radius: 50px;
-  font-weight: 800;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-.cat-status-badge.available { background: #D4EDDA; color: #155724; }
-
-.cat-card-body { padding: 20px 24px; }
-.cat-card-body h3 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.4rem;
-  color: var(--dark);
-  margin-bottom: 8px;
-}
-.cat-card-body p { font-size: 0.9rem; color: var(--charcoal); line-height: 1.6; margin-bottom: 12px; }
-.cat-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-.cat-tag {
-  font-size: 0.72rem;
-  font-weight: 700;
-  background: var(--purple-bg);
-  color: var(--purple-deep);
-  padding: 4px 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.home-card-emoji {
+  font-size: 4.5rem;
 }
 
-.section-cta { text-align: center; margin-top: 2.5rem; }
-
-/* --- Ways Section (dark bg, homepage) --- */
-.ways-section {
-  padding: 72px 24px;
-}
-.ways-section.dark {
-  background: var(--dark);
-  padding: 80px 0;
-}
-.ways-section.dark h2,
-.ways-section.dark .section-title,
-.ways-section.dark .section-title.light { color: white; }
-.ways-section.dark .section-subtitle,
-.ways-section.dark .section-subtitle.light { color: rgba(255,255,255,0.65); }
-.ways-section.dark .way-card {
-  background: rgba(255,255,255,0.06);
-  border: 1.5px solid rgba(255,255,255,0.1);
-  color: var(--cream);
-}
-.ways-section.dark .way-card h3 { color: var(--cream); }
-.ways-section.dark .way-card p { color: var(--taupe); }
-
-.ways-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.way-card {
-  background: white;
-  border-radius: 20px;
+.home-card-body {
   padding: 28px 24px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  transition: transform 0.3s;
   text-align: center;
 }
-.way-card:hover { transform: translateY(-4px); }
-.way-card h3 {
+.home-card-body h3 {
   font-family: 'Fredoka One', cursive;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--dark);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
-.way-card p {
-  font-size: 0.87rem;
-  color: var(--brown);
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-.way-icon { font-size: 2.5rem; display: block; margin-bottom: 12px; }
-.way-emoji { font-size: 2.5rem; display: block; margin-bottom: 12px; }
-
-/* --- Donate Tiers Section (homepage) --- */
-.donate-tiers-section { padding: 80px 0; }
-
-.tiers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-.tier-card {
-  background: white;
-  border-radius: 24px;
-  padding: 28px 20px;
-  border: 2.5px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s;
-  position: relative;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-.tier-card:hover,
-.tier-card.active,
-.tier-card.selected,
-.tier-card.featured {
-  border-color: var(--purple);
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(155,127,189,0.2);
-}
-.tier-card.selected {
-  background: linear-gradient(135deg, var(--cream), var(--purple-bg));
-}
-
-.tier-badge,
-.tier-popular {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--purple);
-  color: white;
-  font-size: 0.65rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 4px 14px;
-  border-radius: 20px;
-  white-space: nowrap;
-}
-
-.tier-icon { font-size: 2.5rem; display: block; margin-bottom: 8px; }
-.tier-emoji { font-size: 2.8rem; display: block; margin-bottom: 10px; }
-.tier-amount {
-  font-family: 'Fredoka One', cursive;
-  font-size: 2.2rem;
-  color: var(--dark);
-  display: block;
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.tier-name {
-  font-weight: 800;
-  font-size: 0.78rem;
-  color: var(--purple);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 6px 0 8px;
-}
-.tier-desc {
-  font-size: 0.82rem;
-  color: var(--brown);
-  line-height: 1.5;
-}
-.tier-card h3 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.15rem;
-  color: var(--dark);
-  margin-bottom: 8px;
-}
-.tier-card p { font-size: 0.85rem; color: var(--brown); line-height: 1.55; margin-bottom: 16px; }
-
-/* --- Stories Section (homepage) --- */
-.stories-section { padding: 80px 0; }
-
-.stories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-.story-card {
-  background: white;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  transition: transform 0.3s;
-}
-.story-card:hover { transform: translateY(-4px); }
-
-.story-img {
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--purple-bg), #D4C8E8);
-}
-.story-emoji { font-size: 3.5rem; }
-.story-body { padding: 20px 24px; }
-.story-card .story-body h3 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.3rem;
-  color: var(--dark);
-  margin-bottom: 4px;
-}
-.story-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 800;
-  color: var(--purple);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 8px;
-}
-.story-card .story-body p {
-  font-size: 0.88rem;
+.home-card-body p {
+  font-size: 0.92rem;
   color: var(--charcoal);
   line-height: 1.65;
-  font-style: italic;
+  margin-bottom: 20px;
 }
-
-/* --- CTA Section --- */
-.cta-section {
-  padding: 80px 64px;
-  background: var(--orange);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.cta-section::before {
-  content: '';
-  position: absolute;
-  font-size: 3rem;
-  opacity: 0.08;
-  top: 10px;
-  left: 0; right: 0;
-  letter-spacing: 20px;
-}
-.cta-section h2 {
-  font-family: 'Fredoka One', cursive;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: white;
-  margin-bottom: 16px;
-}
-.cta-section p {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 36px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.65;
-}
-.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.cta-content { position: relative; z-index: 1; }
-.cta-section .container { position: relative; z-index: 1; }
 
 /* =========================================================================
-   MARQUEE (all variants)
+   MARQUEE (all variants — inner pages)
    ========================================================================= */
 .marquee-strip,
 .marquee-bar,
@@ -729,7 +406,7 @@ nav {
    ========================================================================= */
 .page-hero {
   background: var(--dark);
-  padding: 140px 24px 100px; /* padding-top accounts for 72px fixed nav */
+  padding: 140px 24px 100px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1256,6 +933,82 @@ nav {
    ========================================================================= */
 .tiers-section { padding: 72px 0; }
 
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.tier-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px 20px;
+  border: 2.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.tier-card:hover,
+.tier-card.active,
+.tier-card.selected,
+.tier-card.featured {
+  border-color: var(--purple);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(155,127,189,0.2);
+}
+.tier-card.selected {
+  background: linear-gradient(135deg, var(--cream), var(--purple-bg));
+}
+
+.tier-badge,
+.tier-popular {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--purple);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.tier-icon { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+.tier-emoji { font-size: 2.8rem; display: block; margin-bottom: 10px; }
+.tier-amount {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.2rem;
+  color: var(--dark);
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.tier-name {
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 6px 0 8px;
+}
+.tier-desc {
+  font-size: 0.82rem;
+  color: var(--brown);
+  line-height: 1.5;
+}
+.tier-card h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.tier-card p { font-size: 0.85rem; color: var(--brown); line-height: 1.55; margin-bottom: 16px; }
+
 /* Impact section */
 .impact-section {
   padding: 72px 0;
@@ -1384,6 +1137,36 @@ nav {
 
 /* Other ways section */
 .other-ways-section { padding: 72px 0; }
+
+/* Ways grid (used on donate and old homepage) */
+.ways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.way-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+  text-align: center;
+}
+.way-card:hover { transform: translateY(-4px); }
+.way-card h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.way-card p {
+  font-size: 0.87rem;
+  color: var(--brown);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.way-icon { font-size: 2.5rem; display: block; margin-bottom: 12px; }
+.way-emoji { font-size: 2.5rem; display: block; margin-bottom: 12px; }
 
 /* =========================================================================
    CONTACT PAGE
@@ -1754,6 +1537,33 @@ nav {
   letter-spacing: 0.05em;
 }
 .animal-info .btn { margin-top: 12px; }
+
+/* CTA section (meet the misfits) */
+.cta-section {
+  padding: 80px 64px;
+  background: var(--orange);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: white;
+  margin-bottom: 16px;
+}
+.cta-section p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 36px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-content { position: relative; z-index: 1; }
+.cta-section .container { position: relative; z-index: 1; }
 
 /* =========================================================================
    FORMS (shared: adopt.html, foster.html, volunteer.html)
@@ -2143,19 +1953,15 @@ select {
   .nav-donate { display: inline-block; margin-top: 8px; text-align: center; }
 
   /* Homepage hero */
-  .hero { padding: 100px 24px 60px; }
-  .hero-content { flex-direction: column; }
-  .hero-visual { display: none; }
-  .floating-cats-circle { display: none; }
-  .hero-buttons { flex-direction: column; align-items: flex-start; }
+  .home-hero { min-height: 80vh; }
+
+  /* Three cards */
+  .three-cards-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
 
   /* Grids to single/double column */
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .animals-grid { grid-template-columns: 1fr; max-width: 400px; }
-  .cat-grid { grid-template-columns: 1fr; }
   .ways-grid { grid-template-columns: 1fr; }
   .tiers-grid { grid-template-columns: repeat(2, 1fr); }
-  .stories-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
   .numbers-grid { grid-template-columns: repeat(2, 1fr); }
   .impact-grid { grid-template-columns: 1fr; }
@@ -2163,8 +1969,6 @@ select {
 
   /* Section padding */
   .adopt-section,
-  .stats-section,
-  .stories-section,
   .cta-section { padding: 60px 24px; }
 
   /* About page */

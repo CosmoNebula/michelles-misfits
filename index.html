@@ -12,346 +12,83 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav>
-      <a href="index.html" class="nav-logo">Michelle's <span>MisFits</span> 🐾</a>
-      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="meet-the-misfits.html">Meet the MisFits</a></li>
-        <li><a href="adopt.html">Adopt</a></li>
-        <li><a href="foster.html">Foster</a></li>
-        <li><a href="volunteer.html">Volunteer</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="nav-donate">💛 Donate</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Michelle's <span>MisFits</span> 🐾</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="foster.html">Foster</a></li>
+      <li><a href="adopt.html">Adopt</a></li>
+      <li><a href="donate.html" class="nav-donate">💛 Donate</a></li>
+      <li><a href="meet-the-misfits.html">Meet The Misfits</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <div class="hero-badge">🐱 501(c)(3) Nonprofit Animal Rescue</div>
-        <h1>Every <span class="accent">Misfit</span><br>Deserves a<br><span class="underline">Forever Home</span></h1>
-        <p>We rescue the overlooked, the underdog, the ones who've been passed by. At Michelle's MisFits, every animal gets a second chance — and we need your help to give it to them.</p>
-        <div class="hero-buttons">
-          <a href="meet-the-misfits.html" class="btn btn-primary">🐾 Meet the Misfits</a>
-          <a href="donate.html" class="btn btn-secondary">💛 Donate Now</a>
-          <a href="foster.html" class="btn btn-outline">🏠 Foster a Cat</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="floating-cats-circle">
-          <span class="float-cat" style="--i:0">🐱</span>
-          <span class="float-cat" style="--i:1">😺</span>
-          <span class="float-cat" style="--i:2">🐈</span>
-          <span class="float-cat" style="--i:3">🐾</span>
-          <span class="float-cat" style="--i:4">😻</span>
-          <span class="float-cat" style="--i:5">🐈‍⬛</span>
-          <span class="float-cat" style="--i:6">💜</span>
-          <span class="float-cat" style="--i:7">🐱</span>
-        </div>
+  <!-- HERO — full-viewport bg image with marquee at bottom -->
+  <section class="home-hero">
+    <div class="home-hero-overlay"></div>
+    <div class="home-hero-marquee">
+      <div class="marquee-track">
+        <span class="marquee-item">🐾 Every Misfit Deserves A Home</span>
+        <span class="marquee-item">💜 Heart-Led Rescue</span>
+        <span class="marquee-item">🍼 Bottle Baby Specialists</span>
+        <span class="marquee-item">🏠 Foster Based</span>
+        <span class="marquee-item">📋 501(c)(3) Nonprofit</span>
+        <span class="marquee-item">💛 Medina County Ohio</span>
+        <span class="marquee-item">🐾 Every Misfit Deserves A Home</span>
+        <span class="marquee-item">💜 Heart-Led Rescue</span>
+        <span class="marquee-item">🍼 Bottle Baby Specialists</span>
+        <span class="marquee-item">🏠 Foster Based</span>
+        <span class="marquee-item">📋 501(c)(3) Nonprofit</span>
+        <span class="marquee-item">💛 Medina County Ohio</span>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE STRIP -->
-  <div class="marquee-strip dark">
-    <div class="marquee-inner">
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Adopt a Misfit</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Foster a Friend</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Change a Life</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Volunteer Today</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Every Misfit Matters</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Open Your Heart</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Adopt a Misfit</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Foster a Friend</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Change a Life</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Volunteer Today</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Every Misfit Matters</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>🐾 Open Your Heart</div>
-    </div>
-  </div>
-
-  <!-- STATS -->
-  <section class="stats-section reveal">
+  <!-- THREE CARDS -->
+  <section class="three-cards-section">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number" data-target="200">0</div>
-          <div class="stat-suffix">+</div>
-          <div class="stat-label">Animals Rescued</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="175">0</div>
-          <div class="stat-suffix">+</div>
-          <div class="stat-label">Happy Adoptions</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="50">0</div>
-          <div class="stat-suffix">+</div>
-          <div class="stat-label">Active Fosters</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="30">0</div>
-          <div class="stat-suffix">+</div>
-          <div class="stat-label">Volunteers</div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <h2 class="section-title">Three Small Ways To Make A Big Difference!</h2>
+      <div class="three-cards-grid">
 
-  <!-- ADOPTABLE ANIMALS -->
-  <section class="adoptable-section reveal">
-    <div class="container">
-      <h2 class="section-title">Meet Our Adoptable MisFits</h2>
-      <p class="section-subtitle">Each of these special cats is looking for their forever home. Could you be the one?</p>
-      <div class="cat-grid">
-
-        <div class="cat-card reveal">
-          <div class="cat-card-img">
-            <span class="cat-emoji-placeholder">🐱</span>
-            <span class="cat-status-badge available">Available</span>
+        <div class="home-card">
+          <div class="home-card-img" style="background: linear-gradient(135deg, #EDE6F5, #C9A8E8);">
+            <span class="home-card-emoji">🐾</span>
           </div>
-          <div class="cat-card-body">
-            <h3>Butterscotch</h3>
-            <div class="cat-tags">
-              <span class="cat-tag">Snuggly</span>
-              <span class="cat-tag">Gentle</span>
-              <span class="cat-tag">Lap Cat</span>
-            </div>
-            <p>A sweet orange tabby who loves nothing more than curling up in your lap for a long nap.</p>
-            <a href="meet-the-misfits.html" class="btn btn-small">Learn More</a>
+          <div class="home-card-body">
+            <h3>Adopt</h3>
+            <p>Give a MisFit their forever home. Every adoption saves a life and opens space for another rescue in need.</p>
+            <a href="adopt.html" class="btn btn-primary">Adopt</a>
           </div>
         </div>
 
-        <div class="cat-card reveal">
-          <div class="cat-card-img">
-            <span class="cat-emoji-placeholder">🐱</span>
-            <span class="cat-status-badge available">Available</span>
+        <div class="home-card">
+          <div class="home-card-img" style="background: linear-gradient(135deg, #EDE0D4, #C9B8A8);">
+            <span class="home-card-emoji">🏠</span>
           </div>
-          <div class="cat-card-body">
-            <h3>Professor Paws</h3>
-            <div class="cat-tags">
-              <span class="cat-tag">Curious</span>
-              <span class="cat-tag">Playful</span>
-              <span class="cat-tag">Smart</span>
-            </div>
-            <p>This clever tuxedo cat loves to investigate everything and will keep you entertained for hours.</p>
-            <a href="meet-the-misfits.html" class="btn btn-small">Learn More</a>
+          <div class="home-card-body">
+            <h3>Foster</h3>
+            <p>Open your home temporarily and give a cat a safe space to heal and grow. We provide all supplies — you provide the love.</p>
+            <a href="foster.html" class="btn btn-primary">Foster</a>
           </div>
         </div>
 
-        <div class="cat-card reveal">
-          <div class="cat-card-img">
-            <span class="cat-emoji-placeholder">🐈‍⬛</span>
-            <span class="cat-status-badge available">Available</span>
+        <div class="home-card">
+          <div class="home-card-img" style="background: linear-gradient(135deg, #D4845A, #8B6F5E);">
+            <span class="home-card-emoji">💛</span>
           </div>
-          <div class="cat-card-body">
-            <h3>Midnight</h3>
-            <div class="cat-tags">
-              <span class="cat-tag">Mysterious</span>
-              <span class="cat-tag">Affectionate</span>
-              <span class="cat-tag">Calm</span>
-            </div>
-            <p>A sleek black beauty with emerald eyes who just wants someone to love her unconditionally.</p>
-            <a href="meet-the-misfits.html" class="btn btn-small">Learn More</a>
+          <div class="home-card-body">
+            <h3>Donate</h3>
+            <p>100% of your donation goes directly to the cats — vet bills, food, supplies, and second chances. Every dollar makes a difference.</p>
+            <a href="donate.html" class="btn btn-primary">Donate</a>
           </div>
         </div>
 
-        <div class="cat-card reveal">
-          <div class="cat-card-img">
-            <span class="cat-emoji-placeholder">😺</span>
-            <span class="cat-status-badge available">Available</span>
-          </div>
-          <div class="cat-card-body">
-            <h3>Waffles</h3>
-            <div class="cat-tags">
-              <span class="cat-tag">Goofy</span>
-              <span class="cat-tag">Friendly</span>
-              <span class="cat-tag">Social</span>
-            </div>
-            <p>This orange goofball will greet you at the door and follow you everywhere like a puppy.</p>
-            <a href="meet-the-misfits.html" class="btn btn-small">Learn More</a>
-          </div>
-        </div>
-
-        <div class="cat-card reveal">
-          <div class="cat-card-img">
-            <span class="cat-emoji-placeholder">😻</span>
-            <span class="cat-status-badge available">Available</span>
-          </div>
-          <div class="cat-card-body">
-            <h3>Sir Reginald</h3>
-            <div class="cat-tags">
-              <span class="cat-tag">Distinguished</span>
-              <span class="cat-tag">Regal</span>
-              <span class="cat-tag">Senior</span>
-            </div>
-            <p>A dignified senior gentleman who brings calm and class to any home. He's earned his royal title.</p>
-            <a href="meet-the-misfits.html" class="btn btn-small">Learn More</a>
-          </div>
-        </div>
-
-        <div class="cat-card reveal">
-          <div class="cat-card-img">
-            <span class="cat-emoji-placeholder">🐈</span>
-            <span class="cat-status-badge available">Available</span>
-          </div>
-          <div class="cat-card-body">
-            <h3>Biscuit</h3>
-            <div class="cat-tags">
-              <span class="cat-tag">Kneady</span>
-              <span class="cat-tag">Sweet</span>
-              <span class="cat-tag">Cozy</span>
-            </div>
-            <p>True to her name, Biscuit loves to make biscuits on every blanket she can find. A true comfort queen.</p>
-            <a href="meet-the-misfits.html" class="btn btn-small">Learn More</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="section-cta">
-        <a href="meet-the-misfits.html" class="btn btn-primary">🐾 View All Adoptable Cats</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- THREE WAYS TO HELP -->
-  <section class="ways-section dark reveal">
-    <div class="container">
-      <h2 class="section-title light">Three Ways to Help</h2>
-      <p class="section-subtitle light">Whether you can open your home, give your time, or make a donation — every bit of help changes a cat's life.</p>
-      <div class="ways-grid">
-        <div class="way-card reveal">
-          <div class="way-icon">🐾</div>
-          <h3>Adopt</h3>
-          <p>Give a MisFit their forever home. Browse our available cats and find your perfect match. Every adoption saves a life and opens space for another rescue.</p>
-          <a href="adopt.html" class="btn btn-outline light">Start Your Adoption</a>
-        </div>
-        <div class="way-card reveal">
-          <div class="way-icon">🏠</div>
-          <h3>Foster</h3>
-          <p>Open your home temporarily and give a cat a safe space to heal and grow. We provide all supplies — you provide the love.</p>
-          <a href="foster.html" class="btn btn-outline light">Become a Foster</a>
-        </div>
-        <div class="way-card reveal">
-          <div class="way-icon">💛</div>
-          <h3>Donate</h3>
-          <p>100% of your donation goes directly to the cats — vet bills, food, supplies, and second chances. Every dollar makes a difference.</p>
-          <a href="donate.html" class="btn btn-outline light">Make a Gift</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DONATE TIERS -->
-  <section class="donate-tiers-section reveal">
-    <div class="container">
-      <h2 class="section-title">Your Donation Makes a Difference</h2>
-      <p class="section-subtitle">Every dollar goes directly to the cats in our care. Choose an amount that works for you.</p>
-      <div class="tiers-grid">
-        <div class="tier-card" data-amount="10">
-          <div class="tier-amount">$10</div>
-          <div class="tier-icon">🍽️</div>
-          <h3>Feed a MisFit</h3>
-          <p>Provides a week of nutritious food for one rescue cat in our care.</p>
-          <a href="donate.html" class="btn btn-outline">Donate $10</a>
-        </div>
-        <div class="tier-card" data-amount="25">
-          <div class="tier-amount">$25</div>
-          <div class="tier-icon">💊</div>
-          <h3>Vet Visit Fund</h3>
-          <p>Covers vaccines and a basic wellness check for a newly rescued cat.</p>
-          <a href="donate.html" class="btn btn-outline">Donate $25</a>
-        </div>
-        <div class="tier-card featured" data-amount="50">
-          <div class="tier-badge">Most Popular</div>
-          <div class="tier-amount">$50</div>
-          <div class="tier-icon">🏥</div>
-          <h3>Medical Care</h3>
-          <p>Helps fund spay/neuter surgery and critical medical treatments for a rescue.</p>
-          <a href="donate.html" class="btn btn-primary">Donate $50</a>
-        </div>
-        <div class="tier-card" data-amount="100">
-          <div class="tier-amount">$100</div>
-          <div class="tier-icon">💜</div>
-          <h3>Second Chance Sponsor</h3>
-          <p>Sponsors an entire rescue journey — from intake to forever home, you make it possible.</p>
-          <a href="donate.html" class="btn btn-outline">Donate $100</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUCCESS STORIES -->
-  <section class="stories-section reveal">
-    <div class="container">
-      <h2 class="section-title">Happy Tails: Success Stories</h2>
-      <p class="section-subtitle">These MisFits found their forever homes — and their families couldn't be happier.</p>
-      <div class="stories-grid">
-
-        <div class="story-card reveal">
-          <div class="story-img">
-            <span class="story-emoji">🐱</span>
-          </div>
-          <div class="story-body">
-            <h3>Pickles</h3>
-            <span class="story-tag">Adopted 2024</span>
-            <p>"Pickles was terrified when we first brought him home. Now he sleeps on my pillow every night and greets me at the door. He's the sweetest boy — we can't imagine life without him."</p>
-          </div>
-        </div>
-
-        <div class="story-card reveal">
-          <div class="story-img">
-            <span class="story-emoji">🐈</span>
-          </div>
-          <div class="story-body">
-            <h3>Mango & Papaya</h3>
-            <span class="story-tag">Adopted Together 2024</span>
-            <p>"We fostered these bonded siblings and fell in love instantly. They're inseparable — always grooming each other and playing together. Foster fails are the best kind of fail!"</p>
-          </div>
-        </div>
-
-        <div class="story-card reveal">
-          <div class="story-img">
-            <span class="story-emoji">😺</span>
-          </div>
-          <div class="story-body">
-            <h3>Captain</h3>
-            <span class="story-tag">Adopted 2023</span>
-            <p>"Captain lost an eye before he was rescued, but that doesn't slow him down one bit. He's the bravest, most loving cat we've ever had. Michelle's MisFits gave him a second chance."</p>
-          </div>
-        </div>
-
-        <div class="story-card reveal">
-          <div class="story-img">
-            <span class="story-emoji">😻</span>
-          </div>
-          <div class="story-body">
-            <h3>Luna</h3>
-            <span class="story-tag">Adopted 2024</span>
-            <p>"Luna was found as a stray, underweight and scared. Now she's a healthy, happy girl who rules the house. Thank you, Michelle's MisFits, for saving our baby."</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA SECTION -->
-  <section class="cta-section reveal">
-    <div class="container">
-      <h2>Ready to Join the Misfits Family?</h2>
-      <p>Whether you adopt, foster, volunteer, or donate — you become part of something bigger. Every act of kindness ripples outward and changes a life.</p>
-      <div class="cta-buttons">
-        <a href="meet-the-misfits.html" class="btn btn-white">🐾 Meet Our Cats</a>
-        <a href="foster.html" class="btn btn-white">🏠 Start Fostering</a>
-        <a href="donate.html" class="btn btn-white">💛 Donate Now</a>
       </div>
     </div>
   </section>
@@ -392,10 +129,11 @@
       <div class="footer-nav-col">
         <div class="footer-nav-title">💜 Get Involved</div>
         <ul class="footer-nav-list">
-          <li><a href="meet-the-misfits.html"><span class="nav-dot"></span>Adopt a Cat</a></li>
+          <li><a href="adopt.html"><span class="nav-dot"></span>Adopt a Cat</a></li>
           <li><a href="foster.html"><span class="nav-dot"></span>Become a Foster</a></li>
           <li><a href="volunteer.html"><span class="nav-dot"></span>Volunteer</a></li>
           <li><a href="donate.html"><span class="nav-dot"></span>Make a Donation</a></li>
+          <li><a href="https://www.amazon.com" target="_blank"><span class="nav-dot"></span>Amazon Wishlist</a></li>
           <li><a href="contact.html"><span class="nav-dot"></span>Get in Touch</a></li>
         </ul>
       </div>
@@ -407,61 +145,6 @@
       <p class="copyright">© 2025 Michelle's MisFits · Made with <span class="heart">💜</span> in Medina, Ohio</p>
     </div>
   </footer>
-
-  <!-- SCRIPTS -->
-  <script>
-    // Scroll Reveal Observer
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // Animated Counters
-    const counters = document.querySelectorAll('.stat-number');
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-target'));
-          const duration = 2000;
-          const startTime = performance.now();
-
-          function updateCounter(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            el.textContent = Math.floor(eased * target);
-            if (progress < 1) {
-              requestAnimationFrame(updateCounter);
-            } else {
-              el.textContent = target;
-            }
-          }
-
-          requestAnimationFrame(updateCounter);
-          counterObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    counters.forEach(counter => counterObserver.observe(counter));
-
-    // Tier Card Click
-    document.querySelectorAll('.tier-card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') return;
-        const link = card.querySelector('a');
-        if (link) link.click();
-      });
-    });
-  </script>
 
 </body>
 </html>
